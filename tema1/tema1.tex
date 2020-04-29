@@ -1,0 +1,270 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref} %para que el indice sea interactivo
+\hypersetup{colorlinks=true,linkcolor=black} %para que los link salgan en negro y sin una caja roja 
+\usepackage{enumitem}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics,graphicx, float} %para incluir imï¿½genes y colocarlas
+\usepackage{color,soul} %para poder remarca texto
+\definecolor{lightblue}{rgb}{.90,.95,1} %definicion de colores para el resaltado
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\sethlcolor{amber} %color del resaltado por defecto
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}} %nuevos comandos para hacer resaltados en otros colores
+\DeclareRobustCommand{\hlred}[1]{{\sethlcolor{red}\hl{#1}}}
+\DeclareRobustCommand{\hlpink}[1]{{\sethlcolor{pink}\hl{#1}}}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+	\normalfont \normalsize 
+	\textsc{{\bf Sistema de información para empresas (2019-2020)} \\ Grado en Ingeniería Informática \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	{\huge Tema 1} \\ % The assignment title
+	\normalfont
+	\textbf{Estándares internacionales para la actividad empresarial y comercial.} %subtitulo 
+	\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+	\includegraphics{img/logo.png}
+}
+\author{Antonio Jesús Heredia Castillo} % Nombre y apellidos
+\date{\normalsize\today} % Incluye la fecha actual
+
+\begin{document}
+	\maketitle % Muestra el Tï¿½tulo
+	\newpage
+	\tableofcontents
+	\newpage
+	\section{Sistema GS1 (Global Standard One).}
+	El \textbf{GS1} es una  \hl{organización privada} global dedicada a la elaboración y aplicación de normas mundiales y soluciones para mejorar la eficiencia y visibilidad de las cadenas de abastecimiento, la oferta y la demanda a nivel mundial y en todos los sectores. Ofrece una gama de productos, servicios y soluciones dirigidos fundamentalmente a mejorar la eficiencia y visibilidad de las cadenas de la oferta y la demanda. \\\\
+	El sistema de normas \textbf{GS1} es el \hl{más ampliamente utilizado} en la cadena de suministrado en el mundo.\\
+	\textbf{GS1} se puede interpretar como:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Global System
+		\item Global Standard
+		\item Global Solution
+	\end{itemize}
+	Y el 1 se refiere a un sistema mundial de estándares y \hl{único lenguaje} de comercio y negocio. \\\\
+	La organización esta integrada a nivel mundial, con mï¿½s de 30 aï¿½os de experiencia, aunque el actual nombre es de 2005 cuando se fusiono \hlcyan{EAN} (Erope Article Number) y \hlcyan{UCC} (Uniform Code Council) para formar una única organización mundial. Actualmente su sede esta en Bruselas y ademas cuenta con representación en 108 países.\\\\
+	Los principales sectores en los que opera \textbf{GS1} son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item GS1 BarCodes (\textbf{Códigos de barra})
+		\item GS1 eCom (\textbf{Comercio electrónico})
+		\item GS1 GDSN (\textbf{Red Mundial de Sincronización de Datos})
+		\item EPCglobal (\textbf{Código electrónico de  productos})
+	\end{itemize}
+	Algunos de sus aliados estratégicos son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item International Organization for Standardization \textbf{(ISO)}
+		\item United Nations/Electronic Data Interchange For Administration, Commerce,
+		and Transport \textbf{(UN/EDIFACT)}
+		\item Global Commerce Initiative \textbf{(GCI)}
+		\item International Standard Book Number \textbf{(ISBN)}
+		\item International Standard Serial Number \textbf{(ISSN)}
+		\item International Standard Music Number \textbf{(ISMN)}
+		\item Association for Automatic Identification and Mobility \textbf{(AIM)}
+	\end{itemize}
+
+	La mayor parte del desarrollo de los estándares \textbf{GS1} se inician en las \hlcyan{Organizaciones Miembro (MOs)}.\\\\
+	El MOs en España de \textbf{GS1} es \hlred{AECOC(Asociación Española de Codificación Comercial)}.Su principal actividad es \hlcyan{el desarrollo del Sistema GS1}. \\\\
+	
+	Las \textbf{Organizaciones Miembro} son asociaciones \hlcyan{nacionales} que \hl{proveen herramientas y soportes} que permiten a sus miembros gestionar la cadena de suministro y sus procesos \hlred{de forma más eficiente}.\\
+	Sus principales responsabilidades son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Asignación de \hl{números únicos} , que es la base para el conjunto completo de
+estándares GS1.
+		\item Dar formación y soporte en:
+		\begin{itemize}	
+		\item Sistema de numeración y Códigos de Barras
+		\item Comercio Electrónico/EDI
+		\item Red Global de Sincronización de datos \textbf{(GDSN)}
+		\item Identificación por \textbf{radiofrecuencia/EPC}
+		\item Facilitar información sobre los estándares y la continua evolución
+del Sistema GS1
+		\end{itemize}
+	\end{itemize}
+	Existen \hl{nueve claves de identificación \textbf{GS1}} que dan \hlred{soporte a la identificación} de items, servicios, localizaciones,  unidades logísticas, contenedores retornables, etc.
+	\section{Codificación de productos y mercancías GTIN (Global Trade Item Number)}
+	Global Trade Item Number o \textbf{GTIN} es el \hl{número mundial de un artículo comercial}. Se
+ utiliza para \hlcyan{identificar de manera única} a cualquier producto o ítem sobre el que existe
+	una necesidad de obtener una información especifica y al cual se le debe asignar un
+	precio. Esta definición incluye materias primas, productos terminados, insumos y
+servicios.\\\\
+	Los principios básicos de asignación son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{La asignación del \textbf{GTIN} está reglamentada y administrada a nivel mundial por GS1
+(ex EAN/UCC)}, organismo sin fines de lucro encargado de desarrollar y administrar	estándares de identificación.
+		\item \hlred{Una serie de ítems del mismo conjunto utilizan el mismo \textbf{GTIN}}.
+		\item Un ítem con el nivel más bajo de packaging, como son las unidades de venta para
+minoristas, debe ser identificado con un \textbf{GTIN} con la estructura de datos
+EAN/UCC-8, EAN/UCC-12 o EAN/UCC-13.
+	\end{itemize}
+
+	El \textbf{GTIN} tiene \hl{cuatro estructuras definidas}, cada una de ellas presenta un número
+único de dígitos de acuerdo a una necesidad preestablecida: Estas estructuras son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item UCC-12 (doce dígitos). Su estructura interna puede ser de varios tipos, la principal es:
+		\begin{itemize}
+			\item 6 dígitos que representan el prefijo de la compañía
+			\item 5 dígitos que representan el número de referencia del ítem, producto o servicio
+			\item 1 dígito que representa el dígito de chequeo.
+		\end{itemize} 
+		Aunque puede ser otra de estas combinaciones: \textbf{7-4-1} ó \textbf{8-3-1} ó \textbf{9-2-1}
+		\item EAN/UCC-13 (trece dígitos). Su estructura es:
+		\begin{itemize}
+			\item 12 dígitos que contienen el prefijo de la compañía EAN / UCC
+y el número de referencia del ítem
+			\item 1 dígito que representa el digito de chequeo
+		\end{itemize}
+		\item EAN/UCC-14 (catorce dígitos). Su estructura es:
+		\begin{itemize}
+			\item 1 digito que representa el digito indicador del nivel de agrupación
+			\item 12 dígitos que contienen el prefijo de la compañía en EAN / UPC
+y el número de referencia del ítem
+			\item 1 digito que representa el digito de chequeo
+		\end{itemize}
+		\item EAN/UCC-8 (ocho dígitos). Su estructura interna es:
+			\begin{itemize}
+				\item 7 dígitos que contienen el prefijo de la compañía en EAN / UPC
+y el número de referencia del ítem
+				\item 1 dígito que representa el digito de chequeo
+			\end{itemize} 
+	\end{itemize}
+	\subsection{Reglas asignación de un código GTIN }
+	El \textbf{dígito de control} es una \hl{parte importante} de la codificación GS1, ya que gracias a él
+es posible la eliminación total de los errores de lectura del código; es el mecanismo
+que \hlcyan{evita el error en el tratamiento automático} del Código GTIN. Dicho de otra manera, el dígito de control nos ofrece seguridad \hlred{TOTAL} de lectura. Para calcular dicho código tenemos que seguir estos tres pasos:
+	\begin{enumerate}
+		\item Numerando el código de Derecha a Izquierda, se multiplican por 1 los dígitos que
+ocupan posición par, y por tres los dígitos que ocupan posición impar.
+		\item Se suman los valores de los productos obtenidos.
+		\item Se busca la decena superior al resultado de la suma anterior y se restan estos dos
+valores.
+	\end{enumerate}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.3]{img/calculodigitocontrol}
+		\caption{Fuente \href{https://www.gs1es.org/calculo-de-digito-de-control-gtin/}{gs1es}.}
+		\label{fig:calculodigitocontrol}
+	\end{figure}
+	Al inscribirte en una MOs, recibes un \hl{prefijo de compañía \textbf{GS1}  y documentación completa respecto de cómo deben asignar los \textbf{GTINs} a tus productos}.\\\\
+	Para asignar un código \textbf{GTIN} debemos seguir una serie de reglas:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item El prefijo de compañía \textbf{GS1} consiste en un \hl{prefijo GS1} y un \hl{numero de compañía}, ambos \hlcyan{asignados} por las \hlcyan{organizaciones miembro} y forman el denominado \hlcyan{prefijo de compañía GS1}. En norma general esta compuesto por un número de dígitos que oscila entre 6 y 10.
+		\begin{itemize}
+			\item Los primeros \hlcyan{2 o 3} dígitos constituyen el prefijo de compañía \textbf{GS1} que es asignado por la Oficina Mundial GS1 a cada organización miembro GS1.  En España el prefijo de compañía es el \hlred{84}.
+		\end{itemize}
+	\end{itemize}
+	El \hlcyan{titular de la marca}, la organización que posee las especificaciones de los artículos comerciales, independientemente de quién ha fabricado el proucto y de dónde lo ha hecho, \hlcyan{es responsable de asignar el Número Mundial de Artículo Comercial-GTIN}. Ademas el prefijo de compañía \hlred{no puede ser vendido, rentado o cedido, en su totalidad o en parte} a ninguna otra compañía. \\\\
+	La \hl{compañia} que es dueña del producto y que realiza el registro regulatorio \hl{es responsable de la asignación del GTIN}. \hlred{El titular de la marca solo es responsable hasta que el artículo se retira de su radio de control}.\\\\
+	\textbf{La Referencia de artículo }es un componente del Número Mundial de Artículo Comercial (GTIN) asignado por el titular del Prefijo de Compañía GS1 o Prefijo de
+ Compañía U.P.C. para crear un GTIN inequívoco y es un número no significativo.\\\\
+	\textbf{El Dígito de Verificación} es el último dígito. Se calcula a partir de todos los demás
+dígitos en el GTIN.\\\\
+	\textbf{El indicador} sólo se utiliza en la Estructura de Datos GTIN-14. Toma el valor de 1
+a 8 y se utiliza para niveles de packaging inferiores o superiores. Estos carecen de significado. Los dígitos no tienen que utilizarse en orden secuencial. Puede proporcionar hasta ocho
+Números de Identificación GTIN-14 separados para \hlcyan{identificar grupos de artículos
+comerciales}.
+\hlred{El valor 9 se reserva para los artículos de medida variable (gases, etc.)}. En la Figura \ref{fig:packagin} podemos ver un ejemplo.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/packagin}
+		\caption{Fuente: Diapositivas de teoría.}
+		\label{fig:packagin}
+	\end{figure}
+
+	Hay atributos tales como \hl{Número de Lote, Fecha de Vencimiento, Número de
+Serie, etc que agregan valor al producto} cuando se los combina con el GTIN en un
+código de barras GS1 utilizando los Identificadores de Aplicación GS1. \hlcyan{Su uso
+permite implementar sistemas de seguimiento y rastreo}. Los siguientes atributos pueden ser utilizados con un
+GTIN:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \textbf{Número de Lote}. Los datos son alfanuméricos y de longitud variable, de hasta 20 caracteres
+alfanuméricos.
+		\item \textbf{Fecha de vencimiento}.  Indica el límite establecido para el consumo o uso de un producto. Siempre se codifica como una longitud fija de seis	caracteres con la estructura \hlcyan{YYMMDD}.
+		\item \textbf{Un Número de Serie}. Se utiliza sobre productos que tienen que ser rastreados o seguidos de forma individual.
+	\end{itemize}
+	\subsection{Guía de Asignación de Números Mundiales de Artículos Comerciales}
+	A la hora de darle un \textbf{GTIN} a un producto \hlcyan{tenemos que predefinir sus características}. Aunque no es la única posibilidad, una opción de esas características puede ser:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Nombre
+		\item Composición/ingredientes/materiales
+		\item  Peso/Volumen/Cantidad
+		\item  etc
+	\end{itemize}
+	Si se \hl{modifica cualquiera de los datos} de la descripción hay que generar un \hl{GTIN nuevo}. \\
+	Para reutilizar un \textbf{GTIN} es necesario que hayan transcurrido \hlred{48 meses como mínimo} desde la \hlcyan{fecha de vencimiento} de los últimos artículos  o desde que los \hlcyan{último artículos} comerciales hayan sido suministrados. \\\\
+	\hlred{No se recomienda la pre-fijación de un precio}, ya que si el precio cambia el \textbf{GTIN} debería cambiar. No obstante pueden existir autoridades regulativas que obliguen a pre-fijar el precio. \\\\
+	Si un articulo comercial, realiza un  \hl{cambio importante} o cambia cualquier característica predefinida \hl{es necesario cambiar su \textbf{GTIN}}. \\
+	Si estos \hl{cambios son menores}, por ejemplo cambia el packagin exterior, \hl{no es necesario cambiar} el \textbf{GTIN}.\\ Otro ejemplo donde hay que cambiar el \textbf{GTIN} es cuando la dimensión bruta del producto cambia en mas de un $20\%$.
+
+	Cuando se asigna un nuevo GTIN a un artículo comercial, es fundamental que el Titular de la Marca \hlcyan{proporcione información detallada} sobre las características del producto. Es esencial que la información asociada con un GTIN sea \hlcyan{precisa y se comunique de manera oportuna}.
+	\subsection{GTIN en los productos Software}
+	\hl{Un cambio menor} en la configuración del software que se genera en un plano nocomercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asignación de un nuevo GTIN}. \\\\
+	\hl{Un cambio mayor} en la configuración del software que agrega o cambia la funcionalidad requiere que las dos configuraciones sean distinguibles a través de la
+	asignación de 	\hl{diferentes GTINs}.
+	\subsection{Representación gráfica de un GTIN}
+	\hlcyan{Cada \textbf{GTIN}} codificado queda representado en todos los artículos que identifica mediante algún \hlcyan{símbolo grafico}. La correspondencia entre \textbf{GTIN} codificado y el símbolo grafico, también codificado, se denomina \hlred{simbologia}.\\
+	Existen simbologías \hl{unidimensionales}, como códigos de barras o \hl{multidimensionales}. Por ejemplo:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Unidimensionales (codigos de barras):
+		\begin{itemize}
+			\item EHS
+			\item Code 128
+			\item Code 39
+			\item Code 93
+			\item Codabar
+		\end{itemize}	
+		\item Bidimensionales:
+		\begin{itemize}
+			\item PDF417
+			\item Datamatrix
+			\item Código QR
+		\end{itemize}
+	\end{itemize}
+	\subsection{Código de barras}
+	\hl{Un \textbf{código de barras}} es un código basado en la representación mediante un \hl{conjuntode líneas paralelas verticales de distinto grosor y espaciado} que en su conjunto contienen una determinada información, es decir, las barras y espacios del código representan pequeñas cadenas de caracteres. De este modo, el código de barras \hlcyan{permite reconocer rápidamente un artículo de forma única, global y no ambigua} en un punto de la cadena logística y así poder realizar inventario o consultar sus características asociadas. Hay diferentes tipos de código de barras que pasare a describir.\\\\
+	\hl{El \textbf{Code 128}} es un código alfanumérico de \hl{alta densidad}. El símbolo puede ser \hlcyan{tan largo como se necesite} para almacenar datos. Se diseñó para codificar los caracteres de la tabla ACII. Cada carácter codificado está formado por 11 módulos blancos o negros. Aunque el ``stop caracter" necesita 13 módulos. \hl{Además se utilizan 3 barras y tres espacios}.\\\\ 
+	\hl{El \textbf{GS1-128}} antes se llamaba \textbf{EAN-128}. El GS1 adopta el código 128 y lo que hace es \hl{añadir} a esos códigos unos \hl{identificadores de aplicación}. Estos identificadores permiten clasificar de una forma estandarizadas las características del producto que representa. Los IA significan lo mismo en cualquier parte del mundo, lo que hace que el sistema de codificación GS1-128 sea un lenguaje comun de intercambio de información. Es un sistema para la identificación que \hlred{se utiliza para el entorno logístico} y no para el entorno detallista.\\ Los  números referente a los IA,  vienen representados entre paréntesis en elcódigo humanamente legible, pero \hlred{nunca se ponen los paréntesis en el códigode barras}, solo en la parte humanamente legible.	
+	\\\\
+	
+	\hlcyan{La \textbf{Etiqueta GS1-128} es la forma estandarizada de representar la información de dicho código}. Estas etiquetas tienen como requisito de que además de la información propia del código GS1-128 debe aparecer lo mismo de forma legible para los humanos. Por ello esta etiqueta debe llevar:
+	
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Razón social de la empresa: Nombre de la empresa + Dirección postal
+		\item Información humanamente legible
+		\item Simbología en código de barras de la información. 
+	\end{itemize}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.3\linewidth]{img/etiquetags1-128}
+		\caption{Ejemplo de etiqueta GS1-128}
+		\label{fig:etiquetags1-128}
+	\end{figure}
+	El \textbf{PDF417} es un código \hl{mutifilas, continuo, de longitud variable}, que tiene alta capacidad de almacenamiento de datos. El código consiste en un \hlcyan{patrón de marcas}, los subjuegos están definidos en términos de valores particulares de una función discriminadora, cada subjuego incluye \textit{codewords} disponibles y tiene un método de dos pasos para decodificar los datos escaneados. Tiene una capacidad para \hlred{1800 caracteres alfanuméricos y especiales}. Se usa en la industria, en sistemas de paquetearía para cartas, en compañías de seguros, etc. \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/etiquetapdf417}
+		\caption{Ejemplo de PDF417}
+		\label{fig:etiquetapdf417}
+	\end{figure}
+	El \textbf{datamatrix}, o codificación de datos 2D, es un \hlcyan{sistema industrial de codificación bidimensional} que permite almacenar un gran volumen de información en un formato muy reducido, con una \hlcyan{alta fiabilidad} de lectura gracias a sus sistemas de información redundante y  corrección de errores. El código está formado por celdas de color blanco y negro que forman una figura cuadrada o rectangular. Cada una de esas celdas representa un bit de información.\\\\
+	El \textbf{ECC200} es la última versión del código Datamatrix y soporta sistemas de \hl{codificación avanzadas búsqueda de errores y algoritmos de corrección}. Ademas esta protegido por un estándar de la ISO, y es de dominio público, lo que quiere decir que puede ser utilizado sin tener que pagar ninguna licencia. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{img/datamatrix}
+		\caption{}
+		\label{fig:datamatrix}
+	\end{figure}
+	Un \textbf{código QR} es un módulo para \hlcyan{almacenar información en una matriz de puntos} o un código de barras bidimensional creado por l a compañía japonesa Denso Wave. Se caracteriza por los \hl{tres cuadrados} que se encuentran en las esquinas y que permiten detectar la posición del código al lector. La sigla \textbf{QR} viene de la frase ``quick response". Lo códigos QR son los códigos bidimensionales más populares en Japón. Es de	\hlred{código abierto} y sus derechos de patente no son ejercidos.  \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/qr}
+		\caption{}
+		\label{fig:qr}
+	\end{figure}
+	El \textbf{microcódigo QR} es \hl{una versión más pequeña del estándar del código QR} y está diseñado para aplicaciones que tengan una habilidad menor en el manejo de escaneo grandes. Hay diferentes versiones del microcódigo QR. La más grande de ellas \hl{puede contener hasta 35 caracteres}. 
+	\section{Identificación de objetos mediante radiofrecuencia (RFID) y tecnologías de Internet.}
+	
+\end{document}
