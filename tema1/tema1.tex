@@ -203,7 +203,9 @@ alfanuméricos.
 
 	Cuando se asigna un nuevo GTIN a un artículo comercial, es fundamental que el Titular de la Marca \hlcyan{proporcione información detallada} sobre las características del producto. Es esencial que la información asociada con un GTIN sea \hlcyan{precisa y se comunique de manera oportuna}.
 	\subsection{GTIN en los productos Software}
-	\hl{Un cambio menor} en la configuración del software que se genera en un plano nocomercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asignación de un nuevo GTIN}. \\\\
+	\hl{Un cambio menor} en la configuración del software que se genera en un plano no
+comercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asignación de un
+ nuevo GTIN}. \\\\
 	\hl{Un cambio mayor} en la configuración del software que agrega o cambia la funcionalidad requiere que las dos configuraciones sean distinguibles a través de la
 	asignación de 	\hl{diferentes GTINs}.
 	\subsection{Representación gráfica de un GTIN}
@@ -226,9 +228,12 @@ alfanuméricos.
 		\end{itemize}
 	\end{itemize}
 	\subsection{Código de barras}
-	\hl{Un \textbf{código de barras}} es un código basado en la representación mediante un \hl{conjuntode líneas paralelas verticales de distinto grosor y espaciado} que en su conjunto contienen una determinada información, es decir, las barras y espacios del código representan pequeñas cadenas de caracteres. De este modo, el código de barras \hlcyan{permite reconocer rápidamente un artículo de forma única, global y no ambigua} en un punto de la cadena logística y así poder realizar inventario o consultar sus características asociadas. Hay diferentes tipos de código de barras que pasare a describir.\\\\
+	\hl{Un \textbf{código de barras}} es un código basado en la representación mediante un \hl{conjunto
+de líneas paralelas verticales de distinto grosor y espaciado} que en su conjunto contienen una determinada información, es decir, las barras y espacios del código representan pequeñas cadenas de caracteres. De este modo, el código de barras \hlcyan{permite reconocer rápidamente un artículo de forma única, global y no ambigua} en un punto de la cadena logística y así poder realizar inventario o consultar sus características asociadas. Hay diferentes tipos de código de barras que pasare a describir.\\\\
 	\hl{El \textbf{Code 128}} es un código alfanumérico de \hl{alta densidad}. El símbolo puede ser \hlcyan{tan largo como se necesite} para almacenar datos. Se diseñó para codificar los caracteres de la tabla ACII. Cada carácter codificado está formado por 11 módulos blancos o negros. Aunque el ``stop caracter" necesita 13 módulos. \hl{Además se utilizan 3 barras y tres espacios}.\\\\ 
-	\hl{El \textbf{GS1-128}} antes se llamaba \textbf{EAN-128}. El GS1 adopta el código 128 y lo que hace es \hl{añadir} a esos códigos unos \hl{identificadores de aplicación}. Estos identificadores permiten clasificar de una forma estandarizadas las características del producto que representa. Los IA significan lo mismo en cualquier parte del mundo, lo que hace que el sistema de codificación GS1-128 sea un lenguaje comun de intercambio de información. Es un sistema para la identificación que \hlred{se utiliza para el entorno logístico} y no para el entorno detallista.\\ Los  números referente a los IA,  vienen representados entre paréntesis en elcódigo humanamente legible, pero \hlred{nunca se ponen los paréntesis en el códigode barras}, solo en la parte humanamente legible.	
+	\hl{El \textbf{GS1-128}} antes se llamaba \textbf{EAN-128}. El GS1 adopta el código 128 y lo que hace es \hl{añadir} a esos códigos unos \hl{identificadores de aplicación}. Estos identificadores permiten clasificar de una forma estandarizadas las características del producto que representa. Los IA significan lo mismo en cualquier parte del mundo, lo que hace que el sistema de codificación GS1-128 sea un lenguaje comun de intercambio de información. Es un sistema para la identificación que \hlred{se utiliza para el entorno logístico} y no para el entorno detallista.\\ Los  números referente a los IA,  vienen representados entre paréntesis en el
+código humanamente legible, pero \hlred{nunca se ponen los paréntesis en el código
+de barras}, solo en la parte humanamente legible.	
 	\\\\
 	
 	\hlcyan{La \textbf{Etiqueta GS1-128} es la forma estandarizada de representar la información de dicho código}. Estas etiquetas tienen como requisito de que además de la información propia del código GS1-128 debe aparecer lo mismo de forma legible para los humanos. Por ello esta etiqueta debe llevar:
@@ -266,5 +271,145 @@ alfanuméricos.
 	\end{figure}
 	El \textbf{microcódigo QR} es \hl{una versión más pequeña del estándar del código QR} y está diseñado para aplicaciones que tengan una habilidad menor en el manejo de escaneo grandes. Hay diferentes versiones del microcódigo QR. La más grande de ellas \hl{puede contener hasta 35 caracteres}. 
 	\section{Identificación de objetos mediante radiofrecuencia (RFID) y tecnologías de Internet.}
+	\textbf{RFID}(\textbf{R}adio \textbf{F}requency \textbf{ID}entificaction) es un \hl{sistema de almacenamiento y recuperación remota de datos} que usa dispositivo denominados \textbf{etiquetas, tarjetas, transpondedores o tags RFID}.\\
+	\\
+	El propósito fundamental de la tecnología RFID es \hlcyan{transmitir la identidad de un objeto mediante ondas de radio}. Esta tecnología se agrupa dentro de las denominadas \hl{Auto ID} (identificación automática).\\
+	\\
+	Las etiquetas \textbf{RFID} son unos \hlcyan{dispositivos pequeños}, similares a una pegatina, que pueden ser \hl{adheridas o incorporadas a un producto, animal o persona}.Contiene antes para permitirles recibir y responder a peticiones por radiofrecuencia desde un \hl{emisor-receptor RFID}. Las \hlcyan{etiquetas pasivas} no necesitan alimentación eléctrica interna, mientras que las \hlcyan{activas} sí lo requieren. Una de las ventajas de uso de radiofrecuencia es que\hlred{ no se requiere visión directa} entre emisor y receptor. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/rfid}
+		\caption{Diferentes dispositivos RFID}
+		\label{fig:rfid}
+	\end{figure}
+	\subsection{Arquitectura}
+	Un sistema \textbf{RFID} consta de los siguientes tres componentes:
+	\begin{itemize}[label={$\blacktriangleright$}]
+	\item Etiqueta RFID o transponedor
+	\item Lector RFID o transceptor
+	\item Subsistema de procesamiento de datos o Middleware RFID
+	\end{itemize}
+	La \textbf{etiqueta RFID} está compuesta por una antena, un transductor radio y un material encapsulado. El chip posee una memoria interna y existen varios tipos de memoria:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Solo lectura
+		\item De lectura y escritura
+		\item Anticolisión.Etiquetas especiales que permiten que un lectoridentifique varias al mismo tiempo.
+	\end{itemize}
+	El \textbf{lector de RFID} esta compuesto por una antena, un transceptor y un decodificador. El lector envía periódicamente señales para ver si hay alguna etiqueta en sus inmediaciones. 
+	\\
+	El \textbf{Middleware RFID} proporciona los medios de proceso y almacenamiento de datos.
+	\\
+	\\
+	Existen \hl{diferentes tipos de etiquetas RFID}:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Activas. Necesitan alimentación externa.
+		\item Semipasivas. También conocidos como semiactivos o asistidos por batería.
+		\item Pasivas. No requieren ninguna fuente de alimentación
+	\end{itemize}
+	\subsection{Entornos de tags}
+	Los tags \hl{pasivos no requieren} ninguna fuente de \hl{alimentación interna} y son dispositivos puramente pasivos. La mayoría de etiquetas RFID son pasivas. Los tags responden a peticiones o preguntas generando señalesque a su vez \hlred{no deben interferir con las transmisiones del lector}.
+	\\
+	La \hl{señal} que les llega de los lectores \hlcyan{induce una corriente eléctrica pequeña} y suficiente para operar el circuito integradoCMOS del tag. Los tags pasivos suelen tener \hl{distancias de uso} práctico comprendidas \hlcyan{entre los 10 cm} y llegan hasta \hlcyan{unos pocos metros}.
+	\\
+	\\
+	Los \hl{activos} poseen su \hlcyan{propia fuente} autónoma de \hlcyan{energía}, que utilizan para alimentar sus circuitos integrados y propagar su señal al lector. Son más fiables y propagan su señal mas lejos. \\
+	La \hlcyan{principal ventaja} de los tags \textbf{RFID activos} respecto a los pasivos es el \hl{elevado rango de lectura}, del orden de decenas de metros. Como \hlcyan{desventajas}, cabe destacar el \hl{precio}, que es muy \hl{superior} al de los tags pasivos y la \hl{dependencia} de alimentación por \hl{baterías}.
+	\\
+	\\
+	Los \hl{semipasivos} se parecen a los activos en que \hlcyan{poseen una fuente de alimentación} propia. Aunque en este caso se utiliza principalmente para \hlcyan{alimentar el microchip }y \hlred{no} para alimentar la \hlred{transmisión} de la señal. La batería puede permitir al circuito integrado de la etiqueta estar constantemente alimentado y \hlcyan{eliminar la necesidad de diseñar una antena para recoger potencia} de unaseñal entrante. 
+	\\
+	\\
+	Para \hl{leer los datos} de los tags, los lectores utilizan un \hlcyan{algoritmo de individualización}basado en recorrido de árboles, resolviendo las colisiones que puedan darse y procesando secuencialmente las respuestas.
+	\begin{itemize}[label={$\blacktriangleright$}]	
+	\item Existen tags bloqueantes (blocker tags) que pueden usarse para evitar que hayalectores que accedan de forma incontrolada a las tags de un área.
+	\item Un tag puede ser promiscuo, si responde a todas las peticiones sin excepción
+	\item Sera seguro, si requiere autentificación
+	\item Un tag puede estar preparado para activarse o desactivarse como respuesta acomandos del lector.
+	\end{itemize}
+	Los lectores encargados de un grupo de tags en un área pueden operar en \hl{modo autónomo} o en \hl{modo interactivo}.En \hlcyan{modo autónomo} realizan una \hlcyan{identificación periódica} de todos los tags en su entorno y mantienen una lista de presencia con tiempos de persistencia (timeouts) e información de control. Si una entrada expira, se	elimina de la tabla
+	\subsection{Clasificación}
+	Los sistemas RFID se clasifican dependiendo del rango de frecuencias que usan. Existen cuatro tipos de sistemas:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item de frecuencia baja (de 125 a 134,2 y de 140 a 148.5 kilohercios),
+		\item de alta frecuencia (13,56 megahercios),
+		\item UHF o de frecuencia ultraelevada (868 a 956 megahercios), y
+		\item de microondas (2,45 gigahercios).
+	\end{itemize}
+	Los \hl{sistemas UHF} no pueden ser utilizados en todo el mundo porque \hl{no existe unaúnica regulación global} para su uso
+
+	\subsection{Estandarización}
+	Los estándares de RFID abordan cuatro áreas fundamentales:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \textbf{Protocolo en la interfaz aérea}: especifica el modo en el que las etiquetas RFID y los lectores se comunican mediante radiofrecuencia.
+		\item \textbf{Contenido de los datos}: especifica el formato y semántica de los datos que secomunican entre etiquetas y lectores.
+		\item \textbf{Certificación}: pruebas que los productos deben cumplir para garantizar que	cumplen los estándares y pueden interoperar con otros dispositivos de distintos	fabricantes.
+		\item \textbf{Aplicaciones}: usos de los sistemas RFID.
+	\end{itemize}
+	Los estándares \textbf{EPC} para etiquetas son de \hlred{dos clases}:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \textbf{Clase 1}: etiqueta simple, pasiva, de sólo lectura con una memoria no volátil programable una sola vez.
+		\item \textbf{Clase 2}: etiqueta de sólo lectura que se programa en el momento de fabricación delchip (no reprogramable posteriormente).
+	\end{itemize}
+	\subsection{Regularización}
+	No hay ninguna corporación pública global que gobierne las frecuencias usadas para	RFID. En principio, \hlcyan{cada país puede fijar sus propias reglas}.
+	\\
+	Las etiquetas RFID de baja (LF) y de alta (HF) frecuencia se pueden utilizar de formaglobal sin necesidad de licencia.
+	\\
+	La frecuencia ultraalta (UHF) no puede ser utilizada de forma global, ya que no hay un	único estándar global.
+	\\
+	\hl{Existen regulaciones adicionales relacionadas con la salud y condiciones ambientales}. Por ejemplo, \hlcyan{en Europa}, la regulación Waste Electrical and Electronic Equipment(``Equipos eléctricos y electrónicos inútiles"), \hlred{no permite que se desechen las etiquetas RFID}. 
+	\subsection{Beneficios y ventajas}
+	A continuación muestro una lista con beneficios y ventajas: 
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hlcyan{Combinación de diferentes tecnologías}: RFID e Internet.
+		\item \hl{Proveedor de identificación y localización de artículos} en la cadena de	suministro más inmediato, automático y preciso de cualquier compañía, en cualquier sector y en cualquier parte del mundo.
+		\item \hlred{Lecturas más rápidas} y más precisas (eliminando la necesidad de tener una	línea de visión directa).
+		\item Niveles más bajos en el inventario.
+		\item Mejora el flujo de caja y la reducción potencial de los gastos generales.
+		\item \hlcyan{Reducción de roturas de stock}
+		\item Capacidad de informar al personal o a los encargados de cuándo se deben reponer las estanterías o cuándo un artículo se ha colocado en el sitio equivocado.
+		\item Disminución de la pérdida desconocida.
+		\item Ayuda a \hl{conocer} exactamente qué \hl{elementos} han sido \hl{sustraídos} y, si es	necesario, dónde localizarlos.
+		\item La integración de diversas tecnologías -vídeo, sistemas de localización,etc.- conlectores de RFID en estanterías ayuda a prevenir el robo en tienda.
+		\item Mejor utilización de los activos.
+		\item \hlcyan{Seguimiento de los activos reutilizables} (empaquetamientos, embalajes,carretillas) de una forma más precisa.
+		\item \hlcyan{Lucha contra la falsificación} (ésto es primordial para la administración y las industrias farmacéuticas).
+		\item Retirada del mercado de productos concretos.
+		\item \hlred{Reducción de costos} y en el daño a la marca (averías o pérdida de ventas).
+	\end{itemize}
+	\subsection{Uso actual}
+	Dependiendo de las frecuencias utilizadas en los sistemas RFID, el coste , alcance y aplicaciones son diferentes.\\
+	Los sistema de \textbf{baja frecuencia} es utilizan para identificación de animales, seguimiento de barricas de cerveza o como llave de automóviles con sistema antirrobo. \\
+	Las etiquetas de \textbf{alta frecuencia} se utilizan en sitios como  bibliotecas, pales, control de acceso en edificios, seguimiento de equipaje, seguimiento de  artículos de ropa, identificación de pacientes o identificación de acreditaciones, etc. \\
+	Las etiquetas \textbf{UHF} se utilizan en pales, envases y camiones o remolques. \\
+	Las de \textbf{microondas} se utilizan en el control de acceso en vehículos de alta gama.\\
 	
+	Otros usos pueden ser el peaje de autopistas, todo tipo de sensores o incluso en los neumáticos. \\
+	\hl{Actualmente el uso que le damos a diario es con el pago con tarjeta, las tarjetas de transporte publico, llave inteligente en automóviles o el acceso a lugares.}\\
+	Actualmente, \hlred{la aplicación más importante de RFID es la logística}. El uso de esta tecnología permite tener localizado cualquier producto dentro de la cadena de suministro. \\
+	\\
+	\hl{Las etiquetas RFID} se ven como una \hlcyan{alternativa} que reemplazará \hlcyan{a los códigos de barras} UPC o EAN, puesto que tienen un número de ventajas importantes sobre latecnología de código de barras, aunque quizás \hlcyan{no} los logren \hlcyan{sustituir} en su totalidad debido en parte a su costo relativamente más alto. Para algunos \hlcyan{artículos} con un\hlcyan{coste más bajo}, la capacidad de cada etiqueta de ser única se puede considerar exagerada, aunque tendría algunas ventajas tales como una mayor facilidad parallevar a cabo inventarios.
+	\subsection{Polémicas}
+	El uso de la tecnología RFID ha causado una considerable \hl{polémica} e incluso boicots de productos porque su uso indebido \hlred{puede atentar contrala privacidad} de los individuos. Las cuatro razones principales son:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item El comprador de un artículo \hl{no tiene por qué conocer la presencia de la etiqueta}o ser capaz de eliminarla.
+		\item La etiqueta \hlcyan{se puede leer} a cierta distancia\hlcyan{ sin conocimiento del individuo.}
+		\item Si un artículo etiquetado paga con tarjeta de crédito y/o usa una tarjeta defidelidad, \hlcyan{se puede enlazar} la ID única del artículo \hlcyan{ con la identidad del comprador}.
+		\item El sistema de etiquetas EPCGlobal crea, o pretende crear, números de serie 	globales únicos para todos los productos, aunque ésto cree problemas de privacidad y sea totalmente innecesario en la mayoría de las aplicaciones.
+	\end{itemize}
+	La mayoría de las \hl{preocupaciones} giran alrededor del hecho de que las etiquetas RFID	puestas en los productos\hl{ siguen siendo funcionales} incluso después de que se hayancomprado los productos y se hayan llevado a casa, y esto puede \hlred{utilizarse para vigilancia}.
+	\\
+	Aunque la intención es emplear etiquetas RFIDde corta distancia, éstas pueden ser \hlred{interrogadas} a mayores distancias por\hlred{cualquier persona con una antena de alta ganancia}.\\
+	\\
+	Varios países han propuesto la implantación de \hl{dispositivos RFID en los pasaportes}	para aumentar la eficiencia en las máquinas de lectura de datos biométricos.\\
+	Por ejemplo, un asalto cerca de un aeropuerto podría tener como objetivo a víctimas	que han llegado de países ricos, o un terrorista podría diseñar una bomba que funcionara cuando estuviera cerca de personas de un país en particular.\\
+	\\
+	\hlred{Se puede utilizar una jaula de Faraday para evitar que las señales de radiofrecuencia se escapen o entren en una zona, actuando como un blindaje RF.}
+	\subsection{EPC}
+	El código electrónico de producto (EPC, electronic product code) es un ! diseñado para identificar de manera inequívoca cualquier objeto. Este código es unsistema de \hlcyan{identificación y seguimiento} de mercancías en \hlcyan{tiempo real}.\\
+	El numero se encuentra almacenado en un circuito integrado (RFID). Se considera una \hl{evolución} del código \hlcyan{EAN} o \hlcyan{UPC}.\\
+	\\
+	Al \textbf{código EPC} se le pueden asociar \hl{datos dinámicos} referentes al ítem que identifica	tales como: fecha de fabricación, lugar de fabricación, fecha de vencimiento, longitud,grosor, etc. Con el uso del EPC se\hlcyan{ facilita el seguimiento de los productos} a lo largo de la cadena de abastecimiento o del canal de distribución.\\
+	\\
+	Esta forma de codificación es \hl{ideal para} utilizarla con la tecnología \hl{\textbf{RFID}} que ya está diseñada para almacenar un código EPC de 96 bits. \hl{No obstante, el número de código} \textbf{EPC} se puede \hl{representar} también \hl{con} un \hl{código de barras}, pero su gran tamaño hace que sea impracticable para la mayoría de productos. 
 \end{document}
