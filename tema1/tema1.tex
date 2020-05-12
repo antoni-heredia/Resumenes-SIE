@@ -1,10 +1,9 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{hyperref} %para que el indice sea interactivo
 \hypersetup{colorlinks=true,linkcolor=black} %para que los link salgan en negro y sin una caja roja 
 \usepackage{enumitem}
-
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -18,6 +17,8 @@
 \DeclareRobustCommand{\hlred}[1]{{\sethlcolor{red}\hl{#1}}}
 \DeclareRobustCommand{\hlpink}[1]{{\sethlcolor{pink}\hl{#1}}}
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\usepackage{setspace}
+\linespread{0.9}
 
 \title{
 	\normalfont \normalsize 
@@ -39,16 +40,8 @@
 	\tableofcontents
 	\newpage
 	\section{Sistema GS1 (Global Standard One).}
-	El \textbf{GS1} es una  \hl{organización privada} global dedicada a la elaboración y aplicación de normas mundiales y soluciones para mejorar la eficiencia y visibilidad de las cadenas de abastecimiento, la oferta y la demanda a nivel mundial y en todos los sectores. Ofrece una gama de productos, servicios y soluciones dirigidos fundamentalmente a mejorar la eficiencia y visibilidad de las cadenas de la oferta y la demanda. \\\\
-	El sistema de normas \textbf{GS1} es el \hl{más ampliamente utilizado} en la cadena de suministrado en el mundo.\\
-	\textbf{GS1} se puede interpretar como:
-	\begin{itemize}[label={$\blacktriangleright$}]
-		\item Global System
-		\item Global Standard
-		\item Global Solution
-	\end{itemize}
-	Y el 1 se refiere a un sistema mundial de estándares y \hl{único lenguaje} de comercio y negocio. \\\\
-	La organización esta integrada a nivel mundial, con mï¿½s de 30 aï¿½os de experiencia, aunque el actual nombre es de 2005 cuando se fusiono \hlcyan{EAN} (Erope Article Number) y \hlcyan{UCC} (Uniform Code Council) para formar una única organización mundial. Actualmente su sede esta en Bruselas y ademas cuenta con representación en 108 países.\\\\
+	El \textbf{GS1} es una  \hl{organización privada} global dedicada a la elaboración y aplicación de normas mundiales y soluciones para mejorar la eficiencia y visibilidad de las cadenas de abastecimiento, la oferta y la demanda a nivel mundial y en todos los sectores. Ofrece una gama de productos, servicios y soluciones dirigidos fundamentalmente a mejorar la eficiencia y visibilidad de las cadenas de la oferta y la demanda. El sistema de normas \textbf{GS1} es el \hl{más ampliamente utilizado} en la cadena de suministrado en el mundo.
+\\\\
 	Los principales sectores en los que opera \textbf{GS1} son:
 	\begin{itemize}[label={$\blacktriangleright$}]
 		\item GS1 BarCodes (\textbf{Códigos de barra})
@@ -88,11 +81,7 @@ del Sistema GS1
 	\end{itemize}
 	Existen \hl{nueve claves de identificación \textbf{GS1}} que dan \hlred{soporte a la identificación} de items, servicios, localizaciones,  unidades logísticas, contenedores retornables, etc.
 	\section{Codificación de productos y mercancías GTIN (Global Trade Item Number)}
-	Global Trade Item Number o \textbf{GTIN} es el \hl{número mundial de un artículo comercial}. Se
- utiliza para \hlcyan{identificar de manera única} a cualquier producto o ítem sobre el que existe
-	una necesidad de obtener una información especifica y al cual se le debe asignar un
-	precio. Esta definición incluye materias primas, productos terminados, insumos y
-servicios.\\\\
+	Global Trade Item Number o \textbf{GTIN} es el \hl{número mundial de un artículo comercial}. Se utiliza para \hlcyan{identificar de manera única} a cualquier producto o ítem sobre el que existe	una necesidad de obtener una información especifica y al cual se le debe asignar un	precio. Esta definición incluye materias primas, productos terminados, insumos yservicios.\\\\
 	Los principios básicos de asignación son:
 	\begin{itemize}[label={$\blacktriangleright$}]
 		\item \hlcyan{La asignación del \textbf{GTIN} está reglamentada y administrada a nivel mundial por GS1
@@ -106,44 +95,32 @@ EAN/UCC-8, EAN/UCC-12 o EAN/UCC-13.
 	El \textbf{GTIN} tiene \hl{cuatro estructuras definidas}, cada una de ellas presenta un número
 único de dígitos de acuerdo a una necesidad preestablecida: Estas estructuras son:
 	\begin{itemize}[label={$\blacktriangleright$}]
-		\item UCC-12 (doce dígitos). Su estructura interna puede ser de varios tipos, la principal es:
+		\item \hlred{UCC-12 (doce dígitos).} Su estructura interna puede ser de varios tipos, la principal es:
 		\begin{itemize}
 			\item 6 dígitos que representan el prefijo de la compañía
 			\item 5 dígitos que representan el número de referencia del ítem, producto o servicio
 			\item 1 dígito que representa el dígito de chequeo.
 		\end{itemize} 
 		Aunque puede ser otra de estas combinaciones: \textbf{7-4-1} ó \textbf{8-3-1} ó \textbf{9-2-1}
-		\item EAN/UCC-13 (trece dígitos). Su estructura es:
+		\item \hlred{EAN/UCC-13} (trece dígitos). Su estructura es:
 		\begin{itemize}
-			\item 12 dígitos que contienen el prefijo de la compañía EAN / UCC
-y el número de referencia del ítem
+			\item 12 dígitos que contienen el prefijo de la compañía EAN / UCCy el número de referencia del ítem
 			\item 1 dígito que representa el digito de chequeo
 		\end{itemize}
-		\item EAN/UCC-14 (catorce dígitos). Su estructura es:
+		\item \hlred{EAN/UCC-14} (catorce dígitos). Su estructura es:
 		\begin{itemize}
 			\item 1 digito que representa el digito indicador del nivel de agrupación
-			\item 12 dígitos que contienen el prefijo de la compañía en EAN / UPC
-y el número de referencia del ítem
+			\item 12 dígitos que contienen el prefijo de la compañía en EAN / UPCy el número de referencia del ítem
 			\item 1 digito que representa el digito de chequeo
 		\end{itemize}
-		\item EAN/UCC-8 (ocho dígitos). Su estructura interna es:
+		\item \hlred{EAN/UCC-8} (ocho dígitos). Su estructura interna es:
 			\begin{itemize}
-				\item 7 dígitos que contienen el prefijo de la compañía en EAN / UPC
-y el número de referencia del ítem
-				\item 1 dígito que representa el digito de chequeo
+				\item 7 dígitos que contienen el prefijo de la compañía en EAN / UPCy el número de referencia del ítem
+				\item 1 dígito que representa el dígito de chequeo
 			\end{itemize} 
 	\end{itemize}
 	\subsection{Reglas asignación de un código GTIN }
-	El \textbf{dígito de control} es una \hl{parte importante} de la codificación GS1, ya que gracias a él
-es posible la eliminación total de los errores de lectura del código; es el mecanismo
-que \hlcyan{evita el error en el tratamiento automático} del Código GTIN. Dicho de otra manera, el dígito de control nos ofrece seguridad \hlred{TOTAL} de lectura. Para calcular dicho código tenemos que seguir estos tres pasos:
-	\begin{enumerate}
-		\item Numerando el código de Derecha a Izquierda, se multiplican por 1 los dígitos que
-ocupan posición par, y por tres los dígitos que ocupan posición impar.
-		\item Se suman los valores de los productos obtenidos.
-		\item Se busca la decena superior al resultado de la suma anterior y se restan estos dos
-valores.
-	\end{enumerate}	
+	El \textbf{dígito de control} es una \hl{parte importante} de la codificación GS1, ya que gracias a él es posible la eliminación total de los errores de lectura del código; es el mecanismo que \hlcyan{evita el error en el tratamiento automático} del Código GTIN. Dicho de otra manera, el dígito de control nos ofrece seguridad \hlred{TOTAL} de lectura. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.3]{img/calculodigitocontrol}
@@ -160,15 +137,9 @@ valores.
 	\end{itemize}
 	El \hlcyan{titular de la marca}, la organización que posee las especificaciones de los artículos comerciales, independientemente de quién ha fabricado el proucto y de dónde lo ha hecho, \hlcyan{es responsable de asignar el Número Mundial de Artículo Comercial-GTIN}. Ademas el prefijo de compañía \hlred{no puede ser vendido, rentado o cedido, en su totalidad o en parte} a ninguna otra compañía. \\\\
 	La \hl{compañia} que es dueña del producto y que realiza el registro regulatorio \hl{es responsable de la asignación del GTIN}. \hlred{El titular de la marca solo es responsable hasta que el artículo se retira de su radio de control}.\\\\
-	\textbf{La Referencia de artículo }es un componente del Número Mundial de Artículo Comercial (GTIN) asignado por el titular del Prefijo de Compañía GS1 o Prefijo de
- Compañía U.P.C. para crear un GTIN inequívoco y es un número no significativo.\\\\
-	\textbf{El Dígito de Verificación} es el último dígito. Se calcula a partir de todos los demás
-dígitos en el GTIN.\\\\
-	\textbf{El indicador} sólo se utiliza en la Estructura de Datos GTIN-14. Toma el valor de 1
-a 8 y se utiliza para niveles de packaging inferiores o superiores. Estos carecen de significado. Los dígitos no tienen que utilizarse en orden secuencial. Puede proporcionar hasta ocho
-Números de Identificación GTIN-14 separados para \hlcyan{identificar grupos de artículos
-comerciales}.
-\hlred{El valor 9 se reserva para los artículos de medida variable (gases, etc.)}. En la Figura \ref{fig:packagin} podemos ver un ejemplo.
+	\textbf{La Referencia de artículo }es un componente del Número Mundial de Artículo Comercial (GTIN) asignado por el titular del Prefijo de Compañía GS1 o Prefijo de Compañía U.P.C. para crear un GTIN inequívoco y es un número no significativo.\\\\
+	\textbf{El Dígito de Verificación} es el último dígito. Se calcula a partir de todos los demás dígitos en el GTIN.\\\\
+	\textbf{El indicador} sólo se utiliza en la Estructura de Datos GTIN-14. Toma el valor de 1 a 8 y se utiliza para niveles de packaging inferiores o superiores. Estos carecen de significado. Los dígitos no tienen que utilizarse en orden secuencial. Puede proporcionar hasta ocho. Números de Identificación GTIN-14 separados para \hlcyan{identificar grupos de artículos comerciales}. \hlred{El valor 9 se reserva para los artículos de medida variable (gases, etc.)}. En la Figura \ref{fig:packagin} podemos ver un ejemplo.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{img/packagin}
@@ -176,14 +147,9 @@ comerciales}.
 		\label{fig:packagin}
 	\end{figure}
 
-	Hay atributos tales como \hl{Número de Lote, Fecha de Vencimiento, Número de
-Serie, etc que agregan valor al producto} cuando se los combina con el GTIN en un
-código de barras GS1 utilizando los Identificadores de Aplicación GS1. \hlcyan{Su uso
-permite implementar sistemas de seguimiento y rastreo}. Los siguientes atributos pueden ser utilizados con un
-GTIN:
+	Hay atributos tales como \hl{Número de Lote, Fecha de Vencimiento, Número de Serie, etc que agregan valor al producto} cuando se los combina con el GTIN en un código de barras GS1 utilizando los Identificadores de Aplicación GS1. \hlcyan{Su uso permite implementar sistemas de seguimiento y rastreo}. Los siguientes atributos pueden ser utilizados con un GTIN:
 	\begin{itemize}[label={$\blacktriangleright$}]
-		\item \textbf{Número de Lote}. Los datos son alfanuméricos y de longitud variable, de hasta 20 caracteres
-alfanuméricos.
+		\item \textbf{Número de Lote}. Los datos son alfanuméricos y de longitud variable, de hasta 20 caracteres alfanuméricos.
 		\item \textbf{Fecha de vencimiento}.  Indica el límite establecido para el consumo o uso de un producto. Siempre se codifica como una longitud fija de seis	caracteres con la estructura \hlcyan{YYMMDD}.
 		\item \textbf{Un Número de Serie}. Se utiliza sobre productos que tienen que ser rastreados o seguidos de forma individual.
 	\end{itemize}
@@ -203,9 +169,7 @@ alfanuméricos.
 
 	Cuando se asigna un nuevo GTIN a un artículo comercial, es fundamental que el Titular de la Marca \hlcyan{proporcione información detallada} sobre las características del producto. Es esencial que la información asociada con un GTIN sea \hlcyan{precisa y se comunique de manera oportuna}.
 	\subsection{GTIN en los productos Software}
-	\hl{Un cambio menor} en la configuración del software que se genera en un plano no
-comercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asignación de un
- nuevo GTIN}. \\\\
+	\hl{Un cambio menor} en la configuración del software que se genera en un plano no comercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asignación de un nuevo GTIN}. \\\\
 	\hl{Un cambio mayor} en la configuración del software que agrega o cambia la funcionalidad requiere que las dos configuraciones sean distinguibles a través de la
 	asignación de 	\hl{diferentes GTINs}.
 	\subsection{Representación gráfica de un GTIN}
@@ -228,12 +192,9 @@ comercial \hl{y no modifica la función} del dispositivo, \hl{no requiere la asig
 		\end{itemize}
 	\end{itemize}
 	\subsection{Código de barras}
-	\hl{Un \textbf{código de barras}} es un código basado en la representación mediante un \hl{conjunto
-de líneas paralelas verticales de distinto grosor y espaciado} que en su conjunto contienen una determinada información, es decir, las barras y espacios del código representan pequeñas cadenas de caracteres. De este modo, el código de barras \hlcyan{permite reconocer rápidamente un artículo de forma única, global y no ambigua} en un punto de la cadena logística y así poder realizar inventario o consultar sus características asociadas. Hay diferentes tipos de código de barras que pasare a describir.\\\\
+	\hl{Un \textbf{código de barras}} es un código basado en la representación mediante un \hl{conjunto de líneas paralelas verticales de distinto grosor y espaciado} que en su conjunto contienen una determinada información. De este modo, el código de barras \hlcyan{permite reconocer rápidamente un artículo de forma única, global y no ambigua} en un punto de la cadena logística. Hay diferentes tipos de código de barras que pasare a describir.\\\\
 	\hl{El \textbf{Code 128}} es un código alfanumérico de \hl{alta densidad}. El símbolo puede ser \hlcyan{tan largo como se necesite} para almacenar datos. Se diseñó para codificar los caracteres de la tabla ACII. Cada carácter codificado está formado por 11 módulos blancos o negros. Aunque el ``stop caracter" necesita 13 módulos. \hl{Además se utilizan 3 barras y tres espacios}.\\\\ 
-	\hl{El \textbf{GS1-128}} antes se llamaba \textbf{EAN-128}. El GS1 adopta el código 128 y lo que hace es \hl{añadir} a esos códigos unos \hl{identificadores de aplicación}. Estos identificadores permiten clasificar de una forma estandarizadas las características del producto que representa. Los IA significan lo mismo en cualquier parte del mundo, lo que hace que el sistema de codificación GS1-128 sea un lenguaje comun de intercambio de información. Es un sistema para la identificación que \hlred{se utiliza para el entorno logístico} y no para el entorno detallista.\\ Los  números referente a los IA,  vienen representados entre paréntesis en el
-código humanamente legible, pero \hlred{nunca se ponen los paréntesis en el código
-de barras}, solo en la parte humanamente legible.	
+	\hl{El \textbf{GS1-128}} antes se llamaba \textbf{EAN-128}. El GS1 adopta el código 128 y lo que hace es \hl{añadir} a esos códigos unos \hl{identificadores de aplicación}. Estos identificadores permiten clasificar de una forma estandarizadas las características del producto que representa. Los IA significan lo mismo en cualquier parte del mundo, lo que hace que el sistema de codificación GS1-128 sea un lenguaje comun de intercambio de información. Es un sistema para la identificación que \hlred{se utiliza para el entorno logístico} y no para el entorno detallista.\\ Los  números referente a los IA,  vienen representados entre paréntesis en el código humanamente legible, pero \hlred{nunca se ponen los paréntesis en el código de barras}, solo en la parte humanamente legible.	
 	\\\\
 	
 	\hlcyan{La \textbf{Etiqueta GS1-128} es la forma estandarizada de representar la información de dicho código}. Estas etiquetas tienen como requisito de que además de la información propia del código GS1-128 debe aparecer lo mismo de forma legible para los humanos. Por ello esta etiqueta debe llevar:
@@ -247,7 +208,7 @@ de barras}, solo en la parte humanamente legible.
 		\centering
 		\includegraphics[height=0.3\linewidth]{img/etiquetags1-128}
 		\caption{Ejemplo de etiqueta GS1-128}
-		\label{fig:etiquetags1-128}
+		\label{fig:etiques1-128}
 	\end{figure}
 	El \textbf{PDF417} es un código \hl{mutifilas, continuo, de longitud variable}, que tiene alta capacidad de almacenamiento de datos. El código consiste en un \hlcyan{patrón de marcas}, los subjuegos están definidos en términos de valores particulares de una función discriminadora, cada subjuego incluye \textit{codewords} disponibles y tiene un método de dos pasos para decodificar los datos escaneados. Tiene una capacidad para \hlred{1800 caracteres alfanuméricos y especiales}. Se usa en la industria, en sistemas de paquetearía para cartas, en compañías de seguros, etc. \begin{figure}[H]
 		\centering
@@ -271,11 +232,9 @@ de barras}, solo en la parte humanamente legible.
 	\end{figure}
 	El \textbf{microcódigo QR} es \hl{una versión más pequeña del estándar del código QR} y está diseñado para aplicaciones que tengan una habilidad menor en el manejo de escaneo grandes. Hay diferentes versiones del microcódigo QR. La más grande de ellas \hl{puede contener hasta 35 caracteres}. 
 	\section{Identificación de objetos mediante radiofrecuencia (RFID) y tecnologías de Internet.}
-	\textbf{RFID}(\textbf{R}adio \textbf{F}requency \textbf{ID}entificaction) es un \hl{sistema de almacenamiento y recuperación remota de datos} que usa dispositivo denominados \textbf{etiquetas, tarjetas, transpondedores o tags RFID}.\\
+	\textbf{RFID}(\textbf{R}adio \textbf{F}requency \textbf{ID}entificaction) es un \hl{sistema de almacenamiento y recuperación remota de datos} que usa dispositivo denominados \textbf{etiquetas, tarjetas, transpondedores o tags RFID}.
 	\\
-	El propósito fundamental de la tecnología RFID es \hlcyan{transmitir la identidad de un objeto mediante ondas de radio}. Esta tecnología se agrupa dentro de las denominadas \hl{Auto ID} (identificación automática).\\
-	\\
-	Las etiquetas \textbf{RFID} son unos \hlcyan{dispositivos pequeños}, similares a una pegatina, que pueden ser \hl{adheridas o incorporadas a un producto, animal o persona}.Contiene antes para permitirles recibir y responder a peticiones por radiofrecuencia desde un \hl{emisor-receptor RFID}. Las \hlcyan{etiquetas pasivas} no necesitan alimentación eléctrica interna, mientras que las \hlcyan{activas} sí lo requieren. Una de las ventajas de uso de radiofrecuencia es que\hlred{ no se requiere visión directa} entre emisor y receptor. 
+	Las etiquetas \textbf{RFID} son unos \hlcyan{dispositivos pequeños}, similares a una pegatina, que pueden ser \hl{adheridas o incorporadas a un producto, animal o persona}. Una de las ventajas de uso de radiofrecuencia es que\hlred{ no se requiere visión directa} entre emisor y receptor. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{img/rfid}
@@ -283,133 +242,291 @@ de barras}, solo en la parte humanamente legible.
 		\label{fig:rfid}
 	\end{figure}
 	\subsection{Arquitectura}
-	Un sistema \textbf{RFID} consta de los siguientes tres componentes:
+	Un sistema \textbf{RFID} consta de los siguientes \hlcyan{tres componentes}:
 	\begin{itemize}[label={$\blacktriangleright$}]
-	\item Etiqueta RFID o transponedor
-	\item Lector RFID o transceptor
-	\item Subsistema de procesamiento de datos o Middleware RFID
+	\item \hl{Etiqueta} RFID o transponedor
+	\item \hl{Lector} RFID o transceptor
+	\item Subsistema de procesamiento de datos o \hl{Middleware} RFID
 	\end{itemize}
-	La \textbf{etiqueta RFID} está compuesta por una antena, un transductor radio y un material encapsulado. El chip posee una memoria interna y existen varios tipos de memoria:
+	La \textbf{etiqueta RFID} está compuesta por una \hl{antena}, un \hl{transductor} radio y un material \hl{encapsulado}. El chip posee una memoria interna y existen varios tipos de memoria:
 	\begin{itemize}[label={$\blacktriangleright$}]
-		\item Solo lectura
-		\item De lectura y escritura
-		\item Anticolisión.Etiquetas especiales que permiten que un lectoridentifique varias al mismo tiempo.
+		\item \hl{Solo lectura}
+		\item \hl{De lectura y escritura}
+		\item \hl{Anticolisión}.Etiquetas especiales que permiten que un lector
+identifique varias al mismo tiempo.
 	\end{itemize}
-	El \textbf{lector de RFID} esta compuesto por una antena, un transceptor y un decodificador. El lector envía periódicamente señales para ver si hay alguna etiqueta en sus inmediaciones. 
+	El \textbf{lector de RFID} esta compuesto por una \hl{antena}, un \hl{transceptor} y un \hl{decodificador}. El lector envía periódicamente señales para ver si hay alguna etiqueta en sus inmediaciones. 
 	\\
 	El \textbf{Middleware RFID} proporciona los medios de proceso y almacenamiento de datos.
 	\\
 	\\
 	Existen \hl{diferentes tipos de etiquetas RFID}:
 	\begin{itemize}[label={$\blacktriangleright$}]
-		\item Activas. Necesitan alimentación externa.
-		\item Semipasivas. También conocidos como semiactivos o asistidos por batería.
-		\item Pasivas. No requieren ninguna fuente de alimentación
+		\item \hlcyan{Activas}. Necesitan alimentación externa.
+		\item \hlcyan{Semipasivas}. También conocidos como semiactivos o asistidos por batería.
+		\item \hlcyan{Pasivas}. No requieren ninguna fuente de alimentación
 	\end{itemize}
-	\subsection{Entornos de tags}
-	Los tags \hl{pasivos no requieren} ninguna fuente de \hl{alimentación interna} y son dispositivos puramente pasivos. La mayoría de etiquetas RFID son pasivas. Los tags responden a peticiones o preguntas generando señalesque a su vez \hlred{no deben interferir con las transmisiones del lector}.
-	\\
-	La \hl{señal} que les llega de los lectores \hlcyan{induce una corriente eléctrica pequeña} y suficiente para operar el circuito integradoCMOS del tag. Los tags pasivos suelen tener \hl{distancias de uso} práctico comprendidas \hlcyan{entre los 10 cm} y llegan hasta \hlcyan{unos pocos metros}.
-	\\
-	\\
-	Los \hl{activos} poseen su \hlcyan{propia fuente} autónoma de \hlcyan{energía}, que utilizan para alimentar sus circuitos integrados y propagar su señal al lector. Son más fiables y propagan su señal mas lejos. \\
-	La \hlcyan{principal ventaja} de los tags \textbf{RFID activos} respecto a los pasivos es el \hl{elevado rango de lectura}, del orden de decenas de metros. Como \hlcyan{desventajas}, cabe destacar el \hl{precio}, que es muy \hl{superior} al de los tags pasivos y la \hl{dependencia} de alimentación por \hl{baterías}.
-	\\
-	\\
-	Los \hl{semipasivos} se parecen a los activos en que \hlcyan{poseen una fuente de alimentación} propia. Aunque en este caso se utiliza principalmente para \hlcyan{alimentar el microchip }y \hlred{no} para alimentar la \hlred{transmisión} de la señal. La batería puede permitir al circuito integrado de la etiqueta estar constantemente alimentado y \hlcyan{eliminar la necesidad de diseñar una antena para recoger potencia} de unaseñal entrante. 
-	\\
-	\\
-	Para \hl{leer los datos} de los tags, los lectores utilizan un \hlcyan{algoritmo de individualización}basado en recorrido de árboles, resolviendo las colisiones que puedan darse y procesando secuencialmente las respuestas.
+	Tambien existen diferentes tipos de Tags
 	\begin{itemize}[label={$\blacktriangleright$}]	
-	\item Existen tags bloqueantes (blocker tags) que pueden usarse para evitar que hayalectores que accedan de forma incontrolada a las tags de un área.
-	\item Un tag puede ser promiscuo, si responde a todas las peticiones sin excepción
-	\item Sera seguro, si requiere autentificación
-	\item Un tag puede estar preparado para activarse o desactivarse como respuesta acomandos del lector.
+		\item Existen tags \hlred{bloqueantes} (blocker tags) que pueden usarse para evitar que haya lectores que accedan de forma incontrolada a las tags de un área.
+		\item Un tag puede ser \hlcyan{promiscuo}, si responde a todas las peticiones sin excepción
+		\item Sera \hl{seguro}, si requiere autentificación
 	\end{itemize}
 	Los lectores encargados de un grupo de tags en un área pueden operar en \hl{modo autónomo} o en \hl{modo interactivo}.En \hlcyan{modo autónomo} realizan una \hlcyan{identificación periódica} de todos los tags en su entorno y mantienen una lista de presencia con tiempos de persistencia (timeouts) e información de control. Si una entrada expira, se	elimina de la tabla
 	\subsection{Clasificación}
 	Los sistemas RFID se clasifican dependiendo del rango de frecuencias que usan. Existen cuatro tipos de sistemas:
 	\begin{itemize}[label={$\blacktriangleright$}]	
-		\item de frecuencia baja (de 125 a 134,2 y de 140 a 148.5 kilohercios),
-		\item de alta frecuencia (13,56 megahercios),
-		\item UHF o de frecuencia ultraelevada (868 a 956 megahercios), y
+		\item de frecuencia \hl{baja} (de 125 a 134,2 y de 140 a 148.5 kilohercios),
+		\item de \hlcyan{alta} frecuencia (13,56 megahercios),
+		\item UHF o de frecuencia \hlred{ultraelevada} (868 a 956 megahercios), y
 		\item de microondas (2,45 gigahercios).
 	\end{itemize}
-	Los \hl{sistemas UHF} no pueden ser utilizados en todo el mundo porque \hl{no existe unaúnica regulación global} para su uso
+	Los \hl{sistemas UHF} no pueden ser utilizados en todo el mundo porque \hl{no existe una
+única regulación global} para su uso
 
 	\subsection{Estandarización}
 	Los estándares de RFID abordan cuatro áreas fundamentales:
 	\begin{itemize}[label={$\blacktriangleright$}]	
-		\item \textbf{Protocolo en la interfaz aérea}: especifica el modo en el que las etiquetas RFID y los lectores se comunican mediante radiofrecuencia.
-		\item \textbf{Contenido de los datos}: especifica el formato y semántica de los datos que secomunican entre etiquetas y lectores.
-		\item \textbf{Certificación}: pruebas que los productos deben cumplir para garantizar que	cumplen los estándares y pueden interoperar con otros dispositivos de distintos	fabricantes.
+		\item \textbf{Protocolo en la interfaz aérea}: especifica el \hl{modo} en el que las etiquetas RFID y los lectores se \hl{comunican} mediante radiofrecuencia.
+		\item \textbf{Contenido de los datos}: especifica el \hl{formato} y \hl{semántica} de los datos que secomunican entre etiquetas y lectores.
+		\item \textbf{Certificación}: pruebas que los productos deben cumplir para garantizar que	cumplen los estándares y \hlcyan{pueden interoperar} con otros \hlcyan{dispositivos de distintos fabricantes.}
 		\item \textbf{Aplicaciones}: usos de los sistemas RFID.
 	\end{itemize}
 	Los estándares \textbf{EPC} para etiquetas son de \hlred{dos clases}:
 	\begin{itemize}[label={$\blacktriangleright$}]	
-		\item \textbf{Clase 1}: etiqueta simple, pasiva, de sólo lectura con una memoria no volátil programable una sola vez.
-		\item \textbf{Clase 2}: etiqueta de sólo lectura que se programa en el momento de fabricación delchip (no reprogramable posteriormente).
+		\item \textbf{Clase 1}: etiqueta simple, pasiva, de sólo lectura con una \hlcyan{memoria no volátil} programable una sola vez.
+		\item \textbf{Clase 2}: etiqueta de \hl{sólo lectura} que se programa en el momento de fabricación del chip (no reprogramable posteriormente).
 	\end{itemize}
-	\subsection{Regularización}
-	No hay ninguna corporación pública global que gobierne las frecuencias usadas para	RFID. En principio, \hlcyan{cada país puede fijar sus propias reglas}.
-	\\
-	Las etiquetas RFID de baja (LF) y de alta (HF) frecuencia se pueden utilizar de formaglobal sin necesidad de licencia.
-	\\
-	La frecuencia ultraalta (UHF) no puede ser utilizada de forma global, ya que no hay un	único estándar global.
-	\\
-	\hl{Existen regulaciones adicionales relacionadas con la salud y condiciones ambientales}. Por ejemplo, \hlcyan{en Europa}, la regulación Waste Electrical and Electronic Equipment(``Equipos eléctricos y electrónicos inútiles"), \hlred{no permite que se desechen las etiquetas RFID}. 
+
 	\subsection{Beneficios y ventajas}
 	A continuación muestro una lista con beneficios y ventajas: 
-	\begin{itemize}[label={$\blacktriangleright$}]	
+	\begin{itemize}
 		\item \hlcyan{Combinación de diferentes tecnologías}: RFID e Internet.
 		\item \hl{Proveedor de identificación y localización de artículos} en la cadena de	suministro más inmediato, automático y preciso de cualquier compañía, en cualquier sector y en cualquier parte del mundo.
 		\item \hlred{Lecturas más rápidas} y más precisas (eliminando la necesidad de tener una	línea de visión directa).
-		\item Niveles más bajos en el inventario.
-		\item Mejora el flujo de caja y la reducción potencial de los gastos generales.
 		\item \hlcyan{Reducción de roturas de stock}
-		\item Capacidad de informar al personal o a los encargados de cuándo se deben reponer las estanterías o cuándo un artículo se ha colocado en el sitio equivocado.
-		\item Disminución de la pérdida desconocida.
 		\item Ayuda a \hl{conocer} exactamente qué \hl{elementos} han sido \hl{sustraídos} y, si es	necesario, dónde localizarlos.
-		\item La integración de diversas tecnologías -vídeo, sistemas de localización,etc.- conlectores de RFID en estanterías ayuda a prevenir el robo en tienda.
 		\item Mejor utilización de los activos.
 		\item \hlcyan{Seguimiento de los activos reutilizables} (empaquetamientos, embalajes,carretillas) de una forma más precisa.
 		\item \hlcyan{Lucha contra la falsificación} (ésto es primordial para la administración y las industrias farmacéuticas).
-		\item Retirada del mercado de productos concretos.
 		\item \hlred{Reducción de costos} y en el daño a la marca (averías o pérdida de ventas).
 	\end{itemize}
-	\subsection{Uso actual}
-	Dependiendo de las frecuencias utilizadas en los sistemas RFID, el coste , alcance y aplicaciones son diferentes.\\
-	Los sistema de \textbf{baja frecuencia} es utilizan para identificación de animales, seguimiento de barricas de cerveza o como llave de automóviles con sistema antirrobo. \\
-	Las etiquetas de \textbf{alta frecuencia} se utilizan en sitios como  bibliotecas, pales, control de acceso en edificios, seguimiento de equipaje, seguimiento de  artículos de ropa, identificación de pacientes o identificación de acreditaciones, etc. \\
-	Las etiquetas \textbf{UHF} se utilizan en pales, envases y camiones o remolques. \\
-	Las de \textbf{microondas} se utilizan en el control de acceso en vehículos de alta gama.\\
-	
-	Otros usos pueden ser el peaje de autopistas, todo tipo de sensores o incluso en los neumáticos. \\
-	\hl{Actualmente el uso que le damos a diario es con el pago con tarjeta, las tarjetas de transporte publico, llave inteligente en automóviles o el acceso a lugares.}\\
-	Actualmente, \hlred{la aplicación más importante de RFID es la logística}. El uso de esta tecnología permite tener localizado cualquier producto dentro de la cadena de suministro. \\
-	\\
-	\hl{Las etiquetas RFID} se ven como una \hlcyan{alternativa} que reemplazará \hlcyan{a los códigos de barras} UPC o EAN, puesto que tienen un número de ventajas importantes sobre latecnología de código de barras, aunque quizás \hlcyan{no} los logren \hlcyan{sustituir} en su totalidad debido en parte a su costo relativamente más alto. Para algunos \hlcyan{artículos} con un\hlcyan{coste más bajo}, la capacidad de cada etiqueta de ser única se puede considerar exagerada, aunque tendría algunas ventajas tales como una mayor facilidad parallevar a cabo inventarios.
-	\subsection{Polémicas}
-	El uso de la tecnología RFID ha causado una considerable \hl{polémica} e incluso boicots de productos porque su uso indebido \hlred{puede atentar contrala privacidad} de los individuos. Las cuatro razones principales son:
-	\begin{itemize}[label={$\blacktriangleright$}]	
-		\item El comprador de un artículo \hl{no tiene por qué conocer la presencia de la etiqueta}o ser capaz de eliminarla.
-		\item La etiqueta \hlcyan{se puede leer} a cierta distancia\hlcyan{ sin conocimiento del individuo.}
-		\item Si un artículo etiquetado paga con tarjeta de crédito y/o usa una tarjeta defidelidad, \hlcyan{se puede enlazar} la ID única del artículo \hlcyan{ con la identidad del comprador}.
-		\item El sistema de etiquetas EPCGlobal crea, o pretende crear, números de serie 	globales únicos para todos los productos, aunque ésto cree problemas de privacidad y sea totalmente innecesario en la mayoría de las aplicaciones.
-	\end{itemize}
-	La mayoría de las \hl{preocupaciones} giran alrededor del hecho de que las etiquetas RFID	puestas en los productos\hl{ siguen siendo funcionales} incluso después de que se hayancomprado los productos y se hayan llevado a casa, y esto puede \hlred{utilizarse para vigilancia}.
-	\\
-	Aunque la intención es emplear etiquetas RFIDde corta distancia, éstas pueden ser \hlred{interrogadas} a mayores distancias por\hlred{cualquier persona con una antena de alta ganancia}.\\
-	\\
-	Varios países han propuesto la implantación de \hl{dispositivos RFID en los pasaportes}	para aumentar la eficiencia en las máquinas de lectura de datos biométricos.\\
-	Por ejemplo, un asalto cerca de un aeropuerto podría tener como objetivo a víctimas	que han llegado de países ricos, o un terrorista podría diseñar una bomba que funcionara cuando estuviera cerca de personas de un país en particular.\\
-	\\
-	\hlred{Se puede utilizar una jaula de Faraday para evitar que las señales de radiofrecuencia se escapen o entren en una zona, actuando como un blindaje RF.}
+
 	\subsection{EPC}
-	El código electrónico de producto (EPC, electronic product code) es un ! diseñado para identificar de manera inequívoca cualquier objeto. Este código es unsistema de \hlcyan{identificación y seguimiento} de mercancías en \hlcyan{tiempo real}.\\
+	El código electrónico de producto (EPC, electronic product code) es un sistema diseñado para identificar de manera inequívoca cualquier objeto. Este código es un
+sistema de \hlcyan{identificación y seguimiento} de mercancías en \hlcyan{tiempo real}.\\
 	El numero se encuentra almacenado en un circuito integrado (RFID). Se considera una \hl{evolución} del código \hlcyan{EAN} o \hlcyan{UPC}.\\
 	\\
-	Al \textbf{código EPC} se le pueden asociar \hl{datos dinámicos} referentes al ítem que identifica	tales como: fecha de fabricación, lugar de fabricación, fecha de vencimiento, longitud,grosor, etc. Con el uso del EPC se\hlcyan{ facilita el seguimiento de los productos} a lo largo de la cadena de abastecimiento o del canal de distribución.\\
+	Al \textbf{código EPC} se le pueden asociar \hl{datos dinámicos} referentes al ítem que identifica
+	tales como: fecha de fabricación, lugar de fabricación, fecha de vencimiento, longitud,
+grosor, etc. Con el uso del EPC se\hlcyan{ facilita el seguimiento de los productos} a lo largo de la cadena de abastecimiento o del canal de distribución.\\
 	\\
 	Esta forma de codificación es \hl{ideal para} utilizarla con la tecnología \hl{\textbf{RFID}} que ya está diseñada para almacenar un código EPC de 96 bits. \hl{No obstante, el número de código} \textbf{EPC} se puede \hl{representar} también \hl{con} un \hl{código de barras}, pero su gran tamaño hace que sea impracticable para la mayoría de productos. 
+	\section{Esquemas XML}
+	\subsection{Historia, criticas y ventajas.}
+	\textbf{XML (eXtensible Markup Language - lenguaje de marcas extensible)} es un \hl{lenguaje de	marcas} desarrollado por el World Wide Web Consortium (W3C). \hlcyan{Deriva} del lenguaje \hlcyan{SGML} y permite definir la gramática de lenguajes específicos para estructurar documentos grandes.\hl{ A diferencia de otros lenguajes}, XML \hl{da soporte a bases de datos} y es útil cuando varias aplicaciones se deben comunicar entre sí o integrar información. \hl{No solo} nació para \hl{internet}, \hl{si} no estándar de \hlcyan{intercambio de información} estructurada entre plataformas. Es una tecnología sencilla que tiene otras que la complementan.
+	\\
+	\\
+	Es regularmente criticado por su nivel de detalle y complejidad. El mapeo puede ser \hlcyan{dificil} para los lenguajes de programación o base de datos.  Otras criticas refutan la afirmación de que XML es un lenguaje autodescriptivo. Frente a XML se propone \hl{JSON} y \hlcyan{YAML}. \\
+	\\
+	Entre sus ventajas podemos encontrar que: 
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item Es extensible
+		\item El analizador es un componente estandar, no es necesario un analizador especifico para cada versión de XML.
+		\item Es fácil entender su estructura y procesarla por un tercero.
+		\item Se transforma datos en información, pues se le añade un significado concreto que se asocia a un contexto. 
+	\end{itemize}
+	\subsection{Estructura}
+	Esta tecnología intenta dar solución  al problema de expresar información estructura de la manera más \hlcyan{abstracta} y \hlcyan{reutilizable} posible. Teniendo asi una estructura de \hlred{árbol} de trozos de información. \\
+	Una \hlcyan{etiqueta} es una marca hecha en un documento para señalar una porcion de este elemento y un \hlcyan{elemento} es un trozo de información que tiene un sentido claro y definido. 
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hl{etiquetas}: $<$\textbf{nombre}$>$, donde nombre es el nombre del elemento que se está señalando
+		\item \hl{elementos}: $<$\textbf{nombre}$>$trozo de información $</$\textbf{nombre}$>$
+		\item  \hl{etiqueta vacia}: $<$\textbf{nombre}$/>$ Es un elemento sin contenido.
+	\end{itemize}
+	Los \hl{elementos} pueden tener contenido(mas elementos, caracteres o ambos a la vez) o estar vacios. Estos siempre empiezan con una \textless \textbf{etiqueta}\textgreater, con atributos o no y terminan con una \textless /\textbf{etiqueta}\textgreater que debe tener el mismo nombre. Es \hlred{obligatorio cerrar} todos los elementos. \\
+	\\
+	Los \hl{atributos} son una manera de \hlcyan{incorporar} características o \hlcyan{propiedades} a los elementos. Estos se incluyen en la etiqueta de inicio y no en su texto. Ejemplo:\\
+	\\
+	\hl{	\textless etiqueta atributo=``valor'' \textgreater texto \textless /etiqueta\textgreater}
+	\\
+	\\
+	Están \hl{delimitados} por \hl{comillas} verticales o dobles. A veces un elemento con contenido se puede modelar como un elemento vació con atributos. \\
+	\\
+	Cuando un documento se considera \hlred{bien formado} es por que cumple todas las definiciones basicas y se puede analizar de fomra correcta por cualquier analizador sintáctico que cumpla con la norma. Para ello:
+	\begin{enumerate}
+		\item Deben seguir una estructura estrictamente jerárquica con respecto a las etiquetas
+		\item Sólo permiten un elemento raíz.
+		\item Los tributos siempre estan encerrados entrecomillas.
+		\item Es sensible a mayúsculas y minúsculas.
+		\item Se le asigna un nombre a las estructuras, tipoas de elementos, entidades, elementos particulares, etc.
+		\item Las etiquetas, referencias y declaraciones se denomican marcas y son las partes de un documento que el procesador debe entender.
+	\end{enumerate}
+	
+	Un documento XML podemos decir que esta formado por un prólogo y un cuerpo. \\
+	El prologo contiene:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item Una declaración XML.
+		\item Declaración de tipo de documento (DTD).
+		\item Uno o más comentario e instrucciones de procesamiento. 
+	\end{itemize}
+	En la \hl{declaración XML} se define la versión usada, la codificación del documento y tambien puede incluir una declaración de documento autónomo. \\
+	Este se puede incluir desde otra ubicación, con un enlace. Existen varias deficiniciones de tipo de elemento:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hl{EMPTY} no tiene contenido
+		\item  \hl{ANY} puede tener cualquier contenido.
+		\item \hl{MIXED} puede tener caracteres de datos o una mezlca de caracteres y sub-elementos.
+		\item \hl{Element} solo puede tener sub-elementos.
+	\end{itemize}
+	Existen diferentes modelos para de contenido de elementos:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item Modelo sencillo: puede tener un \hlcyan{sólo tipo de subelemento}.
+		\item Secuencia de \hlcyan{más de un subelementos}
+		\item Subelementos \hlcyan{alternativos}
+	\end{itemize}
+
+	Las definiciones de lista de atributos empiezan con un \hlred{\textless ! ATTLIST} a continuación del espacio en blanco viene el identificador y despues viene el nombre del atributo, su tipo y valor por defecto. A menudo interesa que se pueda omitir un atributo sin que se adopte automáticamente un valor por defecto. Para ésto se usa la condición \hlcyan{\#IMPLIED}. Los atributos pueden ser:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item CDATA y NMTOKEN, que son ``character data'' y ``name token''.
+		\item enumerados y notaciones
+		\item ID e IDREF
+	\end{itemize}
+	Las entidades de declaran en el DTD mediante el uso de \textless!ENTITY. Estas pueden ser:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item Internas o externas
+		\item Analizadas o no analizadas
+		\item Generales o Parámetro
+	\end{itemize}
+	Las \hl{generales internas} son las mas sencillas y siempre son \hl{analizadas}.\\
+	Las \hl{generales externas analizadas} obtienen su contenido en cualquier otro sistema.\\
+	Las \hl{entidades no analizadas} siempre son generales y externas.Por ejemplo una imagen.\\
+	Las \hl{entidades parámetro internas y externas} se denomian a aquellas que sólo pueden usarse en la DTD y no en el documento XML:\\
+	Las \hl{predefinidas} se son para representar caracteres especiales. \\
+	Un ejemplo de DTD podria ser:
+	\begin{verbatim}
+		<?xml encoding="UTF-8"?>
+		<!ELEMENT listin (persona)+>
+		<!ELEMENT persona (nombre, email*, relacion?)>
+		<!ATTLIST persona id ID #REQUIRED>
+		<!ATTLIST persona sexo (hombre | mujer) #IMPLIED>
+		<!ELEMENT nombre (#PCDATA)>
+		<!ELEMENT email (#PCDATA)>
+		<!ELEMENT relacion EMPTY>
+		<!ATTLIST relacion amigo-de IDREFS #IMPLIED
+		enemigo-de IDREFS #IMPLIED>
+	\end{verbatim}
+	\subsection{Esquemas XML}
+	Son \hlcyan{similares} a un \hl{DTD} ya que definen al documento XML, están \hlcyan{organizados} y nos dice que \hlcyan{atributos} y de que \hlcyan{tipo} pueden ser sus elementos. \\
+	La ventaja que nos dan son:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item Usan sintaxis del XML
+		\item Permiten especificar los tipos de datos
+		\item son extensibles.
+	\end{itemize}
+	El \hlred{primer elemento} del shema define dos espacios de nombre, el \hl{xml-data} que dice el analizador que esto es un schema y el segunda \hl{datatypes} que permite definir el tipo de \hl{elementos} y \hl{atributos} utilizando el prefijo dt.\\
+	Pueden incluir las siguientes definiciones:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hlcyan{ElementType}.- Define el tipo y contenido de un elemento, incluyendo los subelementos que pueda contener.
+		\item \hlcyan{AttributeType}.- Asigna un tipo y condiciones a un atributo.
+		\item \hlcyan{attribute}.- Declara que un atributo previamente definido por AttributeType.
+		\item \hlcyan{element}.- Declara que un elemento previamente definido por ElementType puede
+aparecer como contenido de otro elemento.
+	\end{itemize}
+	Se empieza por los elementos más profundamente anidados dentro del documento XML, se trabaja de \hl{dentro hacia afuera}. \\
+	XHTML tiene una serie de etiquetas, llamadas etiquetas básicas, tales como:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hlcyan{Párrafos}, que estructuran cotenido.
+		\item \hlcyan{Saltos de línea}, para forzar el salto de linea dentro del parrafo.
+		\item \hlcyan{Títulos}, se puede ordenar la información segun el tamaño del titulo.
+		\item \hl{Citas}, hay tres diferentes \textless blockquote\textgreater, \textless q\textgreater y \textless cite\textgreater .
+		\item\hlcyan{ Separadores horizontales} actualmente casi no se utiliza ya que se utiliza CSS.
+		\item \hlcyan{Comentarios}, son invisibles para el navegador.
+	\end{itemize}
+	\subsection{Otras construcciones}
+	Existe otra construcción XML que \hl{permite especificar datos} utilizando cualquier carácter, especial o no, el \hlred{\textbf{CDATA}}. \\
+	Permite  leer fácilmente documentos XML sin tener que descifrar los \hlcyan{códigos de entidades}. Dentro de una sección CDATA se puede poner \hl{cualquier cosa} con la seguridad de
+que no será interpretada como algo que no es.\\
+	\\
+	EL \hlred{XSL} es un lenguaje que nos permite definir una presentación o formato para documento \textbf{XML}. La aplicación de una hoja de estilo a un documento puede ocurrir tanto en el origen como en el mismo navegador. El \textbf{XSL} contendra una \hl{serie de reglas} que determinan como ocurre la transformación. Cada \hl{regla} se compone de un \hl{patrón} y una \hl{acción}. Esta hoja de estilo tiene una regla raiz que llama a las reglas adecuadas.
+	\subsection{XML en los negocios}
+	Un ejemplo clásico  y muy importante es el uso de XML en la integración de \hlcyan{sistemas de información heterogéneos.} \\
+	En los sistemas de información heterogéneos habitualmente encontramos tres opciones:
+	\begin{itemize}[label={$\blacktriangleright$}]	
+		\item \hl{Mantener} las aplicaciones que funcionan correctamente e integrar con XML.
+		\item \hl{Cambiar} todos los sistemas para conseguir una integración ?de fábrica?.
+Implica demasiados costes.
+		\item\hl{ No integrar} manteniendo las aplicaciones independientes. Esto es muy problemático debido a las ineficiencias que se generan en los procesos de la empresa.
+	\end{itemize}
+	Integrando con XML nos  permite desarrollar una solución inegradora para que se puedan comunicar entre si sistemas que ya están probados. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{img/inegradorXLM}
+		\caption{Fuente \href{https://www.gestiopolis.com/definicion-xml-aplicacion-negocios/}{gestiopolis}}
+		\label{fig:inegradorxlm}
+	\end{figure}
+	En la actualidad la movilidad del personal de una empresa es en muchos casos vital. La principal complicación en estos escenarios consiste normalmente en \hl{dotar de información inmmediata, oportuna y actualizada}. Existen distintos dispositivos que se pueden \hlcyan{comunicar con un servidor} intercambiando información \hlcyan{y así optimiza}r la dinámica de la empresa. \\
+	La tecnología que mas uso hace de XML es la \hlred{web}. Nos permite la transmisión de datos, la comunicación bidireccional pudiendo así establecer \hlcyan{comunicaciones entre aplicaciones} basados en XML como \hl{SOAP} (Simple Object Access
+Protocol), y especificaciones (aunque no estándares aún) como \hl{UDDI} (Universal Description, Discovery and Integration) y \hl{WSDL} (Web Service Definition Language).\\
+	\\
+	Este conjunto de definiciones permite que las aplicaciones distribuidas se basen en una \hlred{tecnología abierta basa en estándares.}\\
+	\section{EDI (intercambio electrónico de datos)}
+	Comercio electrónico es el \hlcyan{intercambio de transacciones comerciales} entre comprador y vendedor a través de \hl{medios electrónicos}. 
+	Este puede ser: 
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item B2B: intercambio entre entidades clientes, proveedores y distribuidores.
+		\item B2C: intercambio entre empresas y clientes finales. 
+	\end{itemize}
+	\hl{En términos generales EDI (Electronic Data Interchange) es la transferencia por medios electrónicos de información comercial o de negocios entre agentes del mercado en un formato estándar de carácter publico}.\\
+	Nació como un sistema de interambio electrónico de documentos para operaciones comerciales. Este enfoque se ha quedado pequeño y hoy en día sirve para transmitir \hlcyan{todo tipo de información técnica}. \\
+	Se puede definir el EDI como el \hl{envío y recepción de documentos con medios telemáticos con el fin de posibilitar su tratamiento automático.}\\
+	\\
+	Los mensajes EDI son e-mail con un determinado formato. Existen varios estándares:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item ANSI X12 (American National Standards Institute, Estados Unidos),
+		\item SCC/JTC EDI (Canadá),
+		\item SITPRO (Gran Bretaña),
+		\item DIN (Alemania),
+		\item EDIFACT (EDI for Administration, Commerce, and Transport) de las naciones unidas
+		\item y estándares mas específicos.
+	\end{itemize}
+	Implantado en grandes compañías, pero en las pequeñas y medianas existen invonvenientes. Esto se debe a que \hl{falta un estándar de firma digital}, la falta de \hlcyan{notario digital} y el \hlcyan{coste de implantación}, entre otros. \\
+	\subsection{Componentes y estructura del EDIFACT}
+	Los componentes son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Actores}.
+		\item \hl{Medios de transmisión} o transporte
+		\item \hl{Formatos de información}
+		\item \hl{Traductor de mensajes}
+		\item \hl{Sistemas administrativos}
+	\end{itemize}
+	los \hlcyan{mensajes EDI} es la información que se intercambia entre los diferentes socios comerciales involucrados.\hlcyan{ Solo haremos} referencia al estándar \hl{EDIFACT}, ya que está optimizado para compactar toda la información del documento original en una estructura de \hlcyan{datos jerárquica}.\\
+	Estos mensajes se estructuran de forma jerárquica por medio de \hl{segmentos de información}. Los principales elementos estructurales son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Intercambio. 
+		\begin{itemize}
+			\item Mensaje. 
+			\begin{itemize}
+				\item Segmento 
+				\begin{itemize}
+					\item Elemento de datos.
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	Los mensajes EDI mas usados en \hlred{España} son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{ORDER} es el pedido
+		\item \hlcyan{DESADV} que correspondería al albarán. 
+		\item  \hlcyan{RECADV} que seria la confirmación de entrega
+		\item \hlcyan{INVOIC} que seria la factura. 
+	\end{itemize}
+	\subsection{Regulación de el EDI}
+	LA asamblea general del \textbf{GS1}, lanzó  el Proyecto de Comunicadores EDI, conocido como \textbf{EACOM}. Este estándar esta compuesto por las \hlred{Guías de Implantación} de los mensajes \textbf{EDIFACT}. \\
+	\\
+	Los mensajes disponibles en el estándar \hl{EANCOM} cubren \hlcyan{todas} las \hlcyan{funciones} requeridas para efectuar transacciones comerciales \hlcyan{completas}. Son de aplicación \hlred{internacional} y \hlred{multisectorial}.\\
+	\\
+	En España es \hl{\textbf{AECOC}} quien \hl{regula} estos estándares de normalización. Define los \hlcyan{tipos de mensajes} EDI, su sentido del \hlcyan{uso} y el \hlcyan{contenido} de estos. Aunque ademas existen integradores que han publicado sus propias guías.
+
+	
+
 \end{document}
