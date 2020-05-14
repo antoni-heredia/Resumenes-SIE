@@ -1,0 +1,408 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref} %para que el indice sea interactivo
+\hypersetup{colorlinks=true,linkcolor=black} %para que los link salgan en negro y sin una caja roja 
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics,graphicx, float} %para incluir imï¿½genes y colocarlas
+\usepackage{color,soul} %para poder remarca texto
+\definecolor{lightblue}{rgb}{.90,.95,1} %definicion de colores para el resaltado
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\sethlcolor{amber} %color del resaltado por defecto
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}} %nuevos comandos para hacer resaltados en otros colores
+\DeclareRobustCommand{\hlred}[1]{{\sethlcolor{red}\hl{#1}}}
+\DeclareRobustCommand{\hlpink}[1]{{\sethlcolor{pink}\hl{#1}}}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\usepackage{setspace}
+\linespread{0.9}
+
+\title{
+	\normalfont \normalsize 
+	\textsc{{\bf Sistema de información para empresas (2019-2020)} \\ Grado en Ingeniería Informática \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	{\huge Tema 2} \\ % The assignment title
+	\normalfont
+	\textbf{Sistemas de Información Empresarial} %subtitulo 
+	\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+	\includegraphics{img/logo.png}
+}
+\author{Antonio Jesús Heredia Castillo} % Nombre y apellidos
+\date{\normalsize\today} % Incluye la fecha actual
+
+\begin{document}
+	\maketitle % Muestra el Tï¿½tulo
+	\newpage
+	\tableofcontents
+	\newpage
+	\section{Procesos y transacciones empresariales.}
+	Según la RAE:\\
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \textbf{Transacción}: \hl{Trato, convenio, negocio.}
+		\item \textbf{Proceso}: \hl{Conjunto de las fases sucesivas de un fenómeno natural o de una
+operación artificial}
+	\end{itemize}
+	
+	Para ser mas específicos \textbf{transacción informática} es una \hlcyan{interacción} con una estructura de \hlred{datos compleja}. Se compone de varios procesos que se \hl{aplican} de forma \hlcyan{secuencial}. Se realiza de una sola vez. Tiene las siguiente propiedades:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \textbf{Atomicidad (Atomicity)}: asegura que la operación se realice o no, pero\hlcyan{ no se quede a medias}.
+		\item\textbf{ Consistencia (Consistency):} Se ejecutan las operaciones que \hlcyan{no rompen las reglas.} 
+		\item \textbf{Aislamiento (Isolation)}: Que \hlcyan{dos transacciones }sobre la misma información \hlcyan{nunca} generará \hlcyan{error}. 
+		\item \textbf{Permanencia (Durability)}: Si se realiza la operación, ésta \hlcyan{persistirá} y no se deshace aunque falle el sistema.
+	\end{itemize}
+	La \hlcyan{atomicidad} se implementa con mecanismos como el \hlcyan{\textbf{journaling}} y la protección frente \hl{accesos concurrentes} mediante \hl{\textbf{bloqueos}}. La \textbf{seriabilidad} se garantiza con la atomicidad. La \hl{permanencia} se implementa \hl{forzando} a que se \hl{confirme} la completa y definitiva transmisión de datos. \\
+	El \textbf{journaling} se basa en llevar un registro de diario en el que se almacena información necesaria para restablecer los cambios realizados. El procedimiento es:\\
+	\begin{enumerate}
+		\item Se \hl{bloquean} las estructuras de datos asociadas.
+		\item Se \hlcyan{reserva un recuso} para almacenar el journal
+		\item Se \hl{efectúan} las modificaciones y por cada una se paunta en journal como deshacer la modificación y se realiza la modificación.
+		\item Si en cualquier momento se \hlred{cancela} la transacción se \hl{deshacen los cambios} uno a uno leyendolos y borrandolos del journal.
+		\item Si todo ha \hl{acabado bien se borra el journal.} 
+	\end{enumerate}
+	\subsection{Transacción electrónica}
+	Una \hl{transacción electrónica} es cualquier actividad que involucra la transferencia de información digital para propósitos específicos. Podemos encontrar las siguientes:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Transacciones entre las \hl{Administraciones} y \hl{otras personas }físicas o jurídicas (egovernment).
+		\item Transacciones \hlcyan{interorganizacionales} (business-to-business).
+		\item Transacciones entre \hl{empresas y consumidores finales} (business-to-consumer).
+		\item Transacciones entre \hlcyan{particulares} (consumer-to-consumer)
+	\end{itemize}
+	\textbf{\hl{Las transacciones electrónicas seguras}} o \textbf{SET} son un protocolo estándar para proporcionar \hl{seguridad a una transacción} con tarjeta de crédito en redes inseguras, en especial internet. Surge en 1996 y involucró a un amplio rango de compañias. \textbf{SET} utiliza técnicas criptográficas tales como \hlcyan{certificados digitales y criptografía} de clave pública para permitir a las entidades llevar a cabo una \hlcyan{autentificación entre si.} No logro el exito esperado por la necesidad de instalar software cliente, su costo y su complejidad. Fue remplazado por \hlred{3-D Secure}. Aunque las implementaciones \hl{actuales} de comercio electrónico usan el protocolo \hlred{SSL}. \\
+	Set incluye los siguientes requerimientos para el pago seguro:\\
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Proveer confidencialidad }de pago e información de órdenes de compra
+		\item \hlcyan{Asegurar la integridad} de la totalidad de los datos que se transmiten.
+		\item Proveer \hl{autenticación} de que el \hl{portador} de una tarjeta es un usuario legítimo de una cuenta.
+		\item Proveer \hl{autenticación} de que el \hl{comerciante} puede aceptar transaciones con tarjetas de crédito.
+		\item Asegurar el uso de las \hlcyan{mejores} \hlcyan{prácticas} de seguridad y tecnicas\hlcyan{} de diseño de sistemas.
+		\item Crear un protocolo que \hlcyan{no dependa de mecanismos de seguridad} de transporte.
+		\item \hlcyan{Facilitar} y promover la \hlcyan{interoperatividad} entre proveedores de software y redes. 
+	\end{itemize}
+	El protocolo \hl{\textbf{SSL}} y su succesor \hl{\textbf{TLS}} son \hl{protocolos} criptográficos que \hl{proporcionan} comunicaciones \hl{seguras} por una red.\\
+	\textbf{SSL} proporciona \hl{autenticación y privacidad} de la información entre extremos. Sólo el servidor es autenticado mientras que el cliente se mantiene sin autenticar. SSL implica:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Negociar entre las partes} el algoritmo que se usará en la comunicación. EN criptografia pública podemos encontrar: RSA, DSA, Fortezza. Para cifrado simétrico: RC2, IDEA, DES, AES. Como funciones hash: MD5 y la familia SHA.
+		\item\hl{ Intercambio de claves públicas} y autenticación basada en certificados digitales
+		\item \hl{Cifrado del tráfico basado en cifrado simétrico}
+	\end{itemize}
+	 \textbf{SSL} se ejecuta en una \hl{capa} situada \hl{entre} los protocolos de aplicación, tales como
+ \hl{HTTP, SMTP, NNTP},\dots y sobre el protocolo de transporte TCP, que forma parte de la
+ familia de protocolos \hl{TCP/IP}. 
+	 \subsection{Procesos de negocio}
+	 \hl{Un proceso de negocio es un conjunto de tareas relacionadas lógicamente llevadas a cabo para lograr un resultado de negocio definido}. Las \hl{entradas} son \hlcyan{requisitos} que deben tenerse antes de que una función pueda ser aplicada.
+	 \\
+	 \hl{También} puede verse como \hlcyan{una colección de actividades estructurales} relacionadas que producen un valor para la organización, sus inversores o sus clientes.
+	 \\
+	En este contexto un proceso de negocio puede ser visto a varios niveles de granularidad. El \hl{enlace entre procesos} de negocio y generación de valor lleva a algunos a ver los procesos de negocio como los \hlcyan{flujos de trabajo} que efectúan la tareas de una
+	organización\\
+	\\
+	Estos pueden ser vistos como un \hl{recetario} para hacer \hl{funcionar} un negocio y \hl{alcanzar} las \hl{metas} de la empresa. Las principales formas de visualizar una organización son la vista funcional y vista de procesos.\\
+	Los procesos poseen las siguientes características:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Pueden ser medidos y están orientados al rendimiento
+		\item Tienen resultados específicos
+		\item Entregan resultados a clientes
+		\item Responden a alguna acción o evento específico
+		\item Las actividades deben agregar valor a las entradas del proceso.
+	\end{itemize}
+	Podemos considerar tres tipos de procesos de negocio los \hl{Procesos estratégicos} que dan orientación al negocio, los \hl{Procesos sustantivos} que dan el valor al cliente y los \hl{Procesos de apoyo vertical u horizontal} que dan soporte a los procesos centrales.
+\\
+\\
+	Podemos decir que los procesos de negocio \hl{consisten} en: \hlcyan{\textit{subprocesos, decisiones y actividades.}} \\
+	Un \hl{subproceso} es una \hl{parte} de un proceso de \hlcyan{mayor nivel que tiene su propia mete}, propietario, entradas y salidas\\
+	La \hl{actividad} es una parte de un proceso que \hlred{no incluye nigua toma de decisión} ni vale la pena descomponer.\\
+	Para aplicar los procesos se deben tener claras las tareas, \hl{una estructura jerárquica y una tendencia a la interacción y comunicación vertical}.\\
+	\\
+	La \hl{visión funcional} es el modelo fundamental del negocio. Las actividades que debe ejecutar la organización, para cumplir
+	con su misión, s\hlcyan{e estructuran en conjuntos de funciones relativamente homogéneas}.\\
+	La \hl{visión de procesos} se \hlcyan{orienta al trabajo mismo} que se debe desarrollar en la organización,\hlcyan{ para que el negocio funcione} y entregue un producto o servicio.
+	\subsection{Gestión de procesos de negocio}
+	Se llama \hl{Gestión o administración} por procesos de negocio (\textbf{BMP}) a la \hlcyan{metodología} corporativa cuyo \hlcyan{objetivo} es mejorar el desempeño de la Organización a través de la \hlcyan{gestión de los procesos de negocio}, que se deben diseñar, modelar, organizar, documentar y optimizar de \hlcyan{forma continua}. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/screenshot001}
+		\label{fig:screenshot001}
+	\end{figure}
+	El \hlcyan{Modelo de Administración por Procesos}, se refiere al \hl{cambio operacional} de la empresa al migrar de una operación funcional a una operación de administrar por procesos.\\
+	\\
+	El \hl{BMP} es el \hlcyan{entendimiento, visibilidad y control} de los procesos de negocio de una organización.\\
+	\\
+	Existen diversos motivos para la realizar la gestión de los procesos dentro de una organización:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Extensión del programa }institucional de calidad.
+		\item Cumplimiento de \hlcyan{legislaciones vigentes}.
+		\item Crear nuevos y mejores procesos (\hlcyan{mejoramiento continuo}).
+		\item Entender qué se está haciendo bien o mal a través de la \hl{comprensión de los procesos}.
+		\item Documentar los procesos para la subcontratación y la \hlred{definición del Service Level Agreement} (SLA, Acuerdo de Nivel de Servicio).
+		\item \hl{Automatización} y \hlcyan{organización} de los procesos.
+		\item \hlcyan{Crear y mantener la cadena de valor}
+	\end{itemize}
+	Un \hl{acuerdo de nivel de servicio} \textbf{SLA}, es un \hlred{contrato} escrito entre \hlcyan{proveedor} de servicio y el \hlcyan{cliente} con el objeto de \hl{fijar el nivel} acordado para la calidad de dicho servicio.\\
+	Un
+\hlcyan{ANS} \hl{identifica} y \hl{define} las \hl{necesidades} del cliente a la vez que \hl{controla} sus \hl{expectativas} de servicio en relación a la capacidad del \hlcyan{proveedor}, proporciona un\hlred{ marco de entendimiento}, simplifica asuntos complicados, reduce las áreas de conflicto y
+	favorece el diálogo ante la disputa.\\
+	\\
+	La \hl{\textbf{cadena de valor empresarial }}, o cadena de valor, es un modelo teórico que
+permite \hlcyan{describir} el \hlcyan{desarrollo} de las actividades de una organización empresarial \hlcyan{generando valor al cliente final.}\\
+	El modelo de la cadena de valor distingue \hlcyan{cinco actividades primarias}:
+	\begin{enumerate}
+		\item  \hl{Logística interna bilateral}: comprende operaciones de recepción de OS
+, gestión de pedidos, seguimiento de las OS y distribución de
+los componentes. 
+		\item \hl{Operaciones (producción):} procesamiento de las materias primas para
+transformarlas en el producto final. 
+		\item \hl{Logística externa lateral}: almacenamiento y recepción de los productos y
+distribución del producto al consumidor.
+		\item \hl{Marketing y Ventas:} actividades con las cuales se da a conocer el
+producto.
+		\item \hl{Servicio de posventa o mantenimiento:} agrupa las actividades destinadas
+a mantener y realzar el valor del producto.
+	\end{enumerate}
+	Se \hl{apoya en actividades secundarias} como \hlcyan{abastecimiento}, \hlcyan{infraestructura} de la organización,\hlcyan{ dirección de recursos humanos}, \hlcyan{desarrollo de tecnología, investigación y desarrollo, etc.}\\
+	\\
+	La cadena de valor se puso enseguida al \hlcyan{frente} del pensamiento de \hlcyan{gestión de
+	empresa} como una poderosa herramienta de análisis para \hlcyan{planificación estratégica}. Por ello el \hlcyan{pensamiento sistémico} en este aspecto ha evolucionado a desarrollar \hlcyan{propuestas de valor}, en las que la oferta se diseña integralmente
+	para atender de modo óptimo a la demanda. La cadena de valor ayuda a \hlcyan{determinar} las actividades o \hlcyan{competencias distintivas} que permiten generar una \hlcyan{ventaja competitiva}.\\
+	El \hlcyan{conjunto de actividades} de valor que decide realizar una unidad de
+negocio es a lo que se le llama estrategia competitiva o \hlcyan{estrategia del negocio}. También
+	puede ser aplicado al estudio de la \hlcyan{cadena de suministro} así como a \hlcyan{redes de distribución}. Intenta \hlcyan{resaltar las actividades} en las que se pueden aplicar mejor las \hlcyan{estrategias competitivas}  y en las que es\hlcyan{ más probable} que los Sistemas de Información tengan un \hlcyan{impacto estratégico}.\\
+	La cadena de valor de una empresa se debe \hlcyan{enlaza}r con las cadenas de valor de sus \hlcyan{proveedores}, \hlcyan{distribuidores} y \hlcyan{clientes} dando así lugar a \hlred{redes de valor}.
+	\subsection{SOA - Arquitectura orientada a servicios}
+	La arquitectura \hlcyan{SOA} es una arquitectura de software que \hlcyan{define} el uso de \hlcyan{servicio} para dar soporte a los requisitos del negocio. \hl{Proporciona} una \hlcyan{metodología} y un\hlcyan{ marco de trabajo} para documentar las capacidades de negocio. Ademas permite la creación de \hlcyan{Sistemas} de información altamente \hlcyan{escalables}. A su vez \hlcyan{brinda} una forma bien definida de
+\hlcyan{exposición} e \hlcyan{invocación} de servicios, lo cual \hlcyan{facilita la interacción entre diferentes sistemas propios o de terceros}. \\
+	En \textbf{SOA} se define las siguientes capas de software:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{ Aplicaciones básicas}: 
+		\item \hl{Exposición de funcionalidades}
+		\item \hl{Integración de servicios}
+		\item \hl{Composición de procesos}
+		\item \hl{Entrega}
+	\end{itemize}
+	En \textbf{SOA} encontramos diferente terminología:\\
+	 \hlcyan{servicio}: una función \hlcyan{sin estado, auto-contenida}, que \hlcyan{acepta} unas \hlcyan{llamadas} y \hlcyan{devuelve} unas \hlcyan{respuestas}. Estos no dependen del estado de otras funciones o procesos. \\
+	 \hlcyan{Orquestación}: es la \hlcyan{secuenciación de servicios y el aprovisionamiento de la lógica} adicional para procesar datos.\\
+	 \hlcyan{Sin estado.}: \hlcyan{Ni mantiene ni depende de condición pre-existente alguna}. Algunos servicios no son dependientes de la condición de ninguno otro servicio. 
+	 \hlcyan{Proveedor}: La función que \hlred{brinda un servicio} en respuesta a una llamada o petición
+desde un consumidor.
+\\
+	 \hlcyan{Consumidor}: La función que \hlred{consume el resultado} del servicio provisto por un
+ proveedor.\\
+	 \\
+	 El diseño y desarrollo de \textbf{SOA} es un \hlcyan{análisis y diseño orientado a servicios}. Hay que tener la mentalidad de \hlcyan{crear servicios comunes que son orquestados por clientes} para implementar los procesos de negocio. \\
+	 Los nodos de la red hacen \hlcyan{disponibles} los \hlcyan{recursos} a otros participantes como s\hlcyan{ervicios independientes} a los que se tiene acceso de forma estandarizada. La mayoría de definiciones \textbf{SOA} utilizan servicios web (\hlred{SOAP} y WSDL en su mayoría) para su implementación. \\
+	 Los beneficios de usar SOA son:
+ 	\begin{itemize}[label={$\blacktriangleright$}]
+	 \item \hlcyan{Mejora en los tiempos} de realización de cambios en procesos.
+	 \item \hl{Facilidad para evolucionar} a modelos de negocios basados en ``terceros''.
+	 \item \hlcyan{Facilidad para abordar modelos} de negocios \hlcyan{colaborativos}.
+	 \item Poder para \hl{reemplazar elementos} de la capa aplicativa SOA sin disrupción
+ en el proceso de negocio.
+	 \item\hlcyan{ Facilidad para la integración} de tecnologías disímiles.
+ 	\end{itemize}
+ 	\subsection{SOAP}
+ 	Es un\hlred{ protocolo estándar} que define cómo dos
+objetos en diferentes \hlcyan{procesos} pueden \hlcyan{comunicarse} por medio de intercambio de datos XML. SOAP forma la capa base de una \hlcyan{pila de protocolo }, ofreciendo así un framework de \hlcyan{mensajería básica} sobre el que construir.\\
+ 	Se basa en \textbf{XML} y consiste en tres partes:
+ 	\begin{itemize}[label={$\blacktriangleright$}] 
+  	\item \hlcyan{Un sobre} (envelope), el cual define qué hay en el mensaje y cómo procesarlo.
+  	\item \hlcyan{Un conjunto de reglas} de codificación para expresar instancias de tipos de datos.
+  	\item \hlcyan{Una conversión} para representar llamadas a procedimientos y respuestas.
+  \end{itemize}	
+	\hlcyan{La arquitectura consiste de muchas capas de especificació}n, subyacentes enlaces de protocolo, modelo de procesamiento y extensibildad del protocolo. Sus tres \hlcyan{características} principales son la \hlcyan{extensibilidad}, la \hl{neutralidad} y la \hlcyan{independencia}. \\
+	\section{Sistemas ERP (Enterprise Resource Planningo Gestión de Recursos Empresariales)}
+	\subsection{SIG}
+	Los \hl{sistemas de información} gerencial (\textbf{SIG}) son el \hl{resultado de la interacción colaborativa} entre personas, tecnologías y procedimientos orientada a \hlcyan{solucionar problemas} empresariales. Los \textbf{SIG o MIS} se \hl{diferencian} de los sistemas de información comunes en que para analizar la información \hlcyan{utilizan otros sistemas} que se usan en las actividades operacionales \hlcyan{de la organización}. \\
+	\\
+
+	  Un \textbf{SIG} es un sistema integrado \hlcyan{usuario-máquina}, que implica que algunas \hl{tareas} son mejor realizadas por el \hlcyan{hombre}, mientras otras son muy bien \hl{hechas} por las \hlcyan{maquinas}. \hlcyan{Tienen funciones gerenciales} como la planificación, organización, dirección y control.\\
+	   La información debe cumplir con lossiguientes cuatro supuestos básicos:
+	  	\begin{itemize}[label={$\blacktriangleright$}]
+		  \item \hl{Calidad}: Imprescindible que los hechos comunicados sean un reflejo de la realidad.
+		  \item \hl{Oportunidad}: Las medidas correctivas deben aplicarse a tiempo, antes de que se presente una gran desviación.
+		  \item \hl{Cantidad}: Es probable que los gerentes casi nunca tomen decisiones acertadas si no disponen de la información suficiente.
+		  \item \hl{Relevancia}: La información que se proporciona debe estar relacionada con las tareas del gerente y su responsabilidad.
+	   \end{itemize}
+
+   	Los pasos para analizar un \textbf{SIG} son:
+   	\begin{enumerate}
+   		\item \hl{Identificar} todos los \hlcyan{agentes} que interactúan con el sistema
+   		\item \hl{Establecer} los \hlcyan{objetivos} a largo y corto plazo.
+   		\item \hlcyan{Identificar la informació}n que se require para ayudar a los agentes y eliminar la información que no se utiliza.
+   		\item \hl{Determinar} cuáles de los \hlcyan{formularios} y \hlcyan{procedimientos}, que sean sencillos y cubren las necesidaddes de los trabajadores.
+   		\item \hl{Revisar} los \hlcyan{formularios} y \hlcyan{procedimientos} existentes.
+   		\item \hl{Establecer} o mejorar los \hlcyan{sistemas manuales}.
+   		\item \hl{Desarrollar procedimientos} para confirmar las exactitud de los datos.
+   		\item \hlcyan{Capacitar y supervisar al persona}l en el uso de los nuevos formularios.
+   		\item \hlred{Optimizar el \textbf{SIG}}
+   	\end{enumerate}
+   Tiene una estructura piramidal, la \hl{parte inferior} esta compuesta por la \hlcyan{información} relacionada con las \hlcyan{transacciones}. \hl{El siguiente nivel} están los recursos de información para el \hlcyan{control diario}.\hl{ El tercer nivel} agrupa los recursos de sistema de información para la \hlcyan{planificación táctica}. \hl{El nivel más alto} comprende los recursos de información necesarios para \hlcyan{planificación estratégica}.
+   \subsection{Sistemas de soporte a decisiones - DSS}
+   Este \hl{concepto es muy amplio}, esto se debe a que hay \hlcyan{muchos enfoques para la toma de decisiones} y \hlcyan{una extensa gama de ámbitos} en los cuales se toman. Estos sistemas pueden ser \hlcyan{\textbf{OLAP} o \textbf{minería de datos}}.
+   \\\\
+   Los \textbf{DSS} puede adoptar muchas formas diferentes. Podemos decir que es un \hl{sistema informático} utilizado para \hlcyan{servir de apoyo, más que automatizar} el proceso de \hlcyan{toma de decisiones}.  El apoyo significa ayudar a las personas que trabajan solas o en grupo a \hlcyan{reunir inteligencia, generar alternativas y tomar decisiones}.\\
+   Son herramientas de mucha utilidad en el \textbf{BI}, permiten realizar el \hlcyan{análisis} de las diferentes \hl{variables del negocio} para apoyar el proceso de tomas de decisiones. Permiten \hl{extraer y manipular información}, ayuda a las \hl{decisiones no estructuradas}. Permiten al usuario \hlcyan{definir interactivamente} que información necesita. Incluye \hlcyan{herramientas de simulación}. Combina información de los sistemas transaccionales internos de la empresa con empresas externas. \\
+   \\
+   Su principal característica es la capacidad de análisis multidimensional \hl{\textbf{OLAP}} que \hlcyan{permite profundizar en la información} hasta llegar a un alto nivel de detalle. Aparte de lo que hemos mencionado anterior mente un \textbf{DSS} también es \hlcyan{adaptable por el usuario}, \hlcyan{genera aprendizaj}e, utiliza \hlcyan{modelos cuantitativos}, los avanzados están equipados con un componente de a\hlcyan{dministración de conocimiento}, pueden ser \hlcyan{implantados en WEB} y permite una ejecución fácil de los análisis.\\
+   \\
+   Podemos encontrar distintos tipos segun su relación con el usuario. Los \hl{Pasivos}:\hlcyan{ ayuda en el proceso de toma de decisiones} pero no lleva  acabo la decisión.Los  \hl{Activo}: Puede l\hlcyan{levar acabo la decisión}. Los  \hl{Cooperativo}:\hlcyan{Permite} al encargado de la toma de decisiones \hlcyan{modificar}, completa o perfeccionar las \hlcyan{sugerencias} de \hlcyan{decisión}, antes de enviar de vuelta al sistema para su validación.
+\\
+   Si utilizamos el modo de asistencia distinguimos:
+   	\begin{itemize}[label={$\blacktriangleright$}]
+   		\item \hl{Dirigidos por modelos}: Se hace hincapié en el acceso y manipulación del modelo. Utiliza datos y parámetros proporcionados por los usuarios.
+   		\item \hl{Dirigidos por comunicación}: Dispone de soporte para varias personas que trabajan en una misma tarea compartida.
+   		\item \hl{Dirigidos por datos}: Enfatizan elacceso y la manipulación de series temporales de datos internos de la empresa
+   		\item \hl{Dirigidos por documentos}: Gestionan, recuperan y manipulan informaciónno estructurada.
+   		\item \hl{Dirigidos por conocimiento}: Proporcionan experiencia acumulada en forma	de hechos, normas, procedimientos, o en estructuras.
+   	\end{itemize}
+  
+   El \hl{Procesamiento Analítico en Línea} tiene como objetivo agilizar la consulta de\hlcyan{ grandes cantidades de datos} utilizando estructuras multidimensionales , grandes BBDD o sistemas transaccionales. \hlcyan{Nos ofrece consultas rápidas}.\\
+   Un \hl{Sistema de información para ejecutivos} es una herramienta \textbf{BI} orientada a usuarios de\hlcyan{ nivel gerencial.}. Se considera un sistema cuya finalidad principal es que el responsable tenga \hl{acceso}, de manera instantánea al estado de los \hlcyan{indicadores de negocio}.Permite a usuarios de\hlcyan{ perfil no técnico construir nuevos informes.} También suele i\hl{ncluir alertas de negocio, informes históricos y análisis de tendencias}. 
+   \subsection{Sistema de trazabilidad}
+  Es un conjunto de disciplinas que nos permite obtener seguimiento de los productos a largo plazo. Podemos entender \hl{trazabilidad} como ``un conjunto de \hlcyan{procedimientos} preestablecidos y autosuficientes que permiten \hl{conocer el histórico}, la ubicación y la trayectoria de un producto, olote de productos \hl{a lo largo de la cadena de suministros}, en un momentodado y a través de unas herramientas determinadas''\\
+  Este se compone por:
+  \begin{itemize}[label={$\blacktriangleright$}]
+  	\item \hl{Sistemas de identificación}: Da una matrícula a cada item, caja o palet de los que queremos conocer su trazabilidad.
+  	\item \hl{Sistemas para la captura de datos}: Necesitamos sistemas que capten información relevante, con sensores de estado como temperatura humedad, etc y lectores de códigos de barras. 
+  	\item \hl{Software de trazabilidad}.
+  \end{itemize}
+  Definimos \hl{Item} como la\hlcyan{ unidad minima}, indivisible. Una \hlcyan{agrupación de items} son item unidos bajo un mismo embalaje, seria una \hlcyan{caja}. Y una \hlcyan{agruapción de agrupaciones} seria un \hlcyan{\textbf{palet}.}\\
+  \\
+  El \hl{software de trazabilidad} es aquel capaz de registrar la \hl{traza} de los \hl{productos} a lo largo de la \hlcyan{cadena de suministros} interna o externa. \textbf{GS1} ha \hl{elaborado} una serie de \hlcyan{guias} y recomendaciones sobre la palicación de los estándares en las tareas de \hlcyan{trazabilidad global}. Existe una dificultad ya que\hlcyan{ no existe un patrón} de empaquetamiento, por lo que las exigencias de las \hlcyan{normativas} son \hlcyan{diferentes} entre si. \\
+  \\
+   Un software de trazabilidad puede tener una arquitectura como la del siguiente esquema:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{img/screenshot002}
+		\label{fig:screenshot002}
+	\end{figure}
+	 \hl{La capa principal }y más importante del software de trazabilidad ha de serla de cómo \hlcyan{captar los datos y transmitirlos} al sistema de gestión. En los sitemas modernos, la gestión de codigos, proveedores , etc, esta siendo \hlcyan{delegada al sistema de gestión central}, que se comunican a través del \textbf{SOA}.
+	 \subsection{Gestión de las Relaciones con los Proveedores - SRM}
+	 La\hlcyan{ gestión de las relaciones con los proveedores }es un término que describe los métodos y procesos de una empresa o una institución que compra. Ésto puede ser para la \hlcyan{compra} de \hl{suministros} de uso \hl{interno}, compra de \hl{materias} \hl{primas} para el consumo durante el proceso de fabricación, o para la \hl{adquisición} de \hl{bienes} de \hl{inventario} para ser revendidos como productos en la distribución y venta al por menor.\\
+	 \\
+	Según la \textbf{RAE} podemos entender \hl{inventario} como ``\hl{Asiento de los bienes y demás cosas pertenecientes a una} persona, \hl{comunidad}, hecho con orden y precisión'' o como ``Papel o documento en que están escritas dichas cosas''. En el caso empresarial, los \hl{bienes} que son objeto de inventario son las \hlcyan{existencias} que se destinan a la \hlcyan{venta directa} \hlcyan{o} aquellas destinadas al \hlcyan{proceso productivo}. \\
+	Con el control de inventario podemos reducir costos en:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Reducir costos de pedido}.
+		\item \hlcyan{Reducir costos por falta de material.}
+		\item \hl{Reducir costos de adquisición}
+	\end{itemize}
+	Los costos más relevantes de los involucrados en la administración del desarrollo delos inventarios son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Costo de pedido}: Se le llama costo de pedido al costo generado por lasactividades efectuadas en una solicitud de reaprovisionamiento de existencias
+		\item \hl{Costo de almacenaje de inventario}: Se le llama costo de almacenaje a todos losprocesos y actividades efectuadas para mantener el orden, buen estado y existencia	del inventario
+		\item Costo Total del Inventario: El costo Total de inventario es la suma de los dos	costos anteriores. Se calcula como: $CT=\frac{QCh}{2}+\frac{DCo}{q}$
+	\end{itemize}
+	Hay varios modelos que nos dicen cuando hacer el pedido:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{EOI: Economical Order Interval}: Cada vez que se hace un pedido, se	pide existencias por la diferencia entre algún máximo y la cantidad de que se dispone.
+		\item \hlcyan{POQ: Periodic Order Quantity}: Este intervalo se calcula usando la demanda promedio y seredondea al entero siguiente mayor a cero. 
+		\item \hl{PPA: Part Period Algorithm}: Este algoritmo es un método heurístico de enfoque a la	determinación de los tamaños de lote que los determina equilibrando los costes depedido y de almacenamiento. 
+		\item \hlcyan{IPPA: Incremental Part Period Algorithm}: Este algoritmo es similar al algoritmo PPAexcepto que en lugar de equilibrar los costes acumulados de almacenamiento y dehacer el pedido, equilibra los costos incrementales.
+		\item \hlcyan{PPA: Part Period Algorithm}: Este algoritmo es un método heurístico de enfoque a ladeterminación de los tamaños de lote que los determina equilibrando los costes depedido y de almacenamiento.
+		
+		\item \hl{IPPA: Incremental Part Period Algorithm}: Este algoritmo es similar al algoritmo PPAexcepto que en lugar de equilibrar los costes acumulados de almacenamiento y de hacer el pedido, equilibra los costos incrementales. 
+		\item \hlcyan{EOQ: Economical Order Quantity}; Consiste en encontrar el punto en el que los	costes por hacer el pedido de los artículos y los costes por mantenerlos en inventario son iguales.
+		\item \hl{EPQ: Economical Production Quantity}: Los artículos se producen y se adicionan alinventario gradualmente en lugar de un solo pedido. 
+	\end{itemize}
+	\subsection{Sistema de administración de recursos humanos }
+	\hl{El recurso humano }es el material \hlred{más importante} de una organización, cuyo \hl{objetivo} es \hlcyan{distribuir} apropiadamente \hlcyan{a cada persona en el puesto de trabajo adecuado} según su perfil y acoplar la cultura de la organización con los intereses de cada empleado. Con ello se intenta \hl{mejorar las relaciones interpersonales}, \hlcyan{se detectan necesidades de adiestramiento}, se estudian constantemente determinados valores y se proponen estrategias \hl{para mayor productividad}.\\
+	Un sistema de administración de recursos humanos \hl{consta de:}
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Nóminas}: El modulo que automatiza la gestión del sueldo.
+		\item \hl{Gestión de las prestaciones de trabajo}: Permite evaluar la información de tiempo/trabajo de cada empleado
+		\item \hlcyan{Gestión de las prestaciones sociales}: Permite a los profesionales de recursos humanos administrar lo mejor posiblelas prestaciones sociales, 
+		\item \hl{Gestión de recursos humanos}:El módulo de gestión de recursos humanos cubre	otros aspectos de los RRHH
+		\item \hlcyan{Indicadores de productividad}: Para evaluar la productividad de cada empleado,es necesario cuantificar el tiempo y las actividades que generan resultados positivosdentro de la organización. 
+	\end{itemize}
+	Existen \hl{sistemas \textbf{Duros}} que son sistemas que nacen como un módulo mas del software ERP y \hl{sistemas \textbf{Blandos}} que son sistemas focalizados a la gestión estratégica de RRHH.
+	\subsection{Contabilidad}
+	Se encarga de \hlcyan{comprobar, medir y analizar el patrimonio de las organizaciones}, empresas e individuos, con el fin de servir en la toma de decisiones y control, \hlcyan{presentando la información, previamente registrada, de manera sistemática y útil} para las partes interesadas.\\
+	Podemos distinguir entre usuarios internos y externos. \hl{Los internos} son las personas u órganos que utilizan la información \hlcyan{desde dentro} y los externos son los que \hl{no participan en la gestión} pero necesitan información contable para tomar decisiones. \\
+	\\
+	Se distinguen usuarios de \hl{contabilidad financiera} que son los que \hl{proporciona} la la\hl{ información esencial} del funcionamiento y estado de la empresa\hl{ a todos los agentes económicos interesados} y \hl{contabilidad directiva} que es la que se elabora con una \hlcyan{finalidad interna} y \hlcyan{se utiliza para el cálculo de los costos y los estados} para tomar decisiones en cuanto a producción.\\\\
+	Tenemos que tener en cuenta unos conceptos básicos de contabilidad como son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Activo}: Conjunto de bienes y derechos que se posee. H\hlcyan{ay activo corriente} que son activos liquidos a la fecha de cierre y convertible en dinero en menos de 12 meses \hlcyan{y activos no corrientes} que son los bienes que no varian durante el ciclo de explotación de la empresa. Y tambien existe el \hl{diferido} que son los gatos por pagos anticipado.
+		\item \hl{Pasivo} Los pasivos están formado por las obligaciones hacia terceros.
+		\item \hl{Patrimonio} El patrinomio es la diferencia entre activo y pasivo.
+		\item \hl{Gasto}
+		\item \hl{Ingresos}
+	\end{itemize}
+	La contabilidad, como ciencia, utiliza un \hlcyan{método denominado contable} que tiene cuatro pasos, \hl{el primero es la captación} de los hechos susceptibles de ser contabilizados.\hl{ El segundo es la cuantificación} de los hechos contables. \hlcyan{El tercero seria la representación} mediante registro de los hechos y \hlcyan{por ultimo seria la agreación} de la información registrada que se presenta de forma sintetizada.\\
+	\hl{Las cuentas} son el instrumento de \hlcyan{representación} y medida de cada elemento \hlcyan{patrimonial}. \hlcyan{Hay tantas cuentas como elementos patrimoniales tenga la empresa}. El \hl{plan contable} de una empresa es la codificación del \hlcyan{conjunto de cuentas} que utiliza una empresa. Las cuentas suelen agruparse en distintas partidas o grupos que reflejan los mismosconceptos de bienes o gastos. Hay \hlcyan{dos tipos }de cuentas, de \hl{patrimonio} que aparecen en el balance y pueden formar parte del activo y de \hl{gestión} que reflejan ingresos o gastos.\\
+	\hl{Cargar} es hacer una anotación en el \hlcyan{debe} y \hl{abonar} es hacer una anotación en el \hlcyan{haber}.\hl{ El sistema de partida doble} consiste en que, en cada hecho contable, se ha de producir \hlcyan{al menos un cargo en una cuenta y un abono en otra}, y la suma de los cargos debe
+	ser igual a la suma de los abonos efectuados. \hl{El saldo} de una cuenta es la \hlcyan{diferencia} entre los \hlcyan{débitos} y los \hlcyan{créditos}.\\
+	Cuando se \hl{elabora el balance} la suma de los saldos acreedores debe ser igual a la suma de los	saldos deudores, debido al sistema mencionado de partida doble.\\
+	Existen diferentes libros de contabilidad como:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Libro Diario o Journal}: Es donde se recogen todas las operaciones de la actividad econimica.
+		\item \hl{Libro Mayor o Ledger}: Se recogen para cada cuenta todos los cargos y abonos realizado en las  mimas y es ms fácil de llevar.
+		\item \hl{Libro de Balances o Balance Sheet}: Es donde se reflejan la situación del patrimonio de la empresa.
+		\item \hl{Libro de compra y venta}: Es donde se ingresan las operaciones resultantes por las compras y ventas de un periodo.\\
+		\item \hl{Libro de caja}: Es el que maneja tanto los ingresos como los egresos de caja.
+	\end{itemize}
+	\hlcyan{La ley marca un plazo} durante el cual la empresa debe \hlcyan{conservar} tantos sus \hlcyan{libros} obligatorios como los no obligatorios. Según el pais existe unas \hl{normas contables}.\\
+	Los denominados \hl{estados financieros} son los informes que muestra los \hlcyan{datos fundamentales }del proceso contable de un ejercicio, se realizan \hlcyan{una vez al año.} \\
+	\subsection{Sistemas de planificación de recursos empresariales - ERP}
+	Los \hlcyan{ERP} sistemas de información genrencial que integran y   \hlcyan{manejan muchos de los negocios} asociados con las \hlcyan{operaciones} de \hlcyan{producción} y de los aspectos de \hlcyan{distribución} de una compañía en la producción de bienes o servicios. El propósito fundamental es \hlcyan{otorgar apoyo a los clientes del negocio} dando tiempos rápidos de respuesta a sus problemas, así como un eficiente manejo de la información que \hl{permita una toma} oportuna\hl{ de decisiones y una disminución de los costos} totales de operación. Ademas debe ser \hlred{modular y configurable}. \\
+	El propósito fundamental de un ERP es \hlcyan{otorgar apoyo a los clientes del negocio} dando\hlcyan{tiempos rápidos} de respuesta a sus problemas, \hlcyan{así como un eficiente manejo de la información}.\\
+	En ocasiones, \hlcyan{las soluciones ERP son complejas y difíciles de implantar} debido a que,	partiendo de una configuración inicial de la aplicación que es común, necesitan un\hlred{desarrollo personalizado} para cada empresa.Las \hl{metodologías de implantación} de los ERP en la empresa\hl{ no siempre son todo losimples que se desearía} , dado que entran en juego múltiples facetas\\\\
+	Las \hl{gran ventaja} es la \hlcyan{integración} de todas las aplicaciones de las que una empresa puede necesitar. Por otra parte la \hlcyan{tecnología de seguridad informatica} protege la organización contra delitos externos, como \hlcyan{espionaje} o internos como la \hlcyan{malversación}. \\\\
+	Son muchas las \hl{desventajas} ya que los \textbf{ERP} tienen limitaciones y obstaculos. El éxito depende de las habilidades y experiencia de la fuerza de trabajo. Ademas puede ser que necesitemos cambiar o entrenar a nuestro personal ya que puede no estar capacitado para usarlo. La instalación es \hlred{costosa}, renovación de \hlred{licencias anuales}, se pueden ver como sistemas \hl{rigidos y dificiles de adaptar} al flujo de trabajo.
+\\
+\\
+	\hlcyan{La principal diferencia de un \textbf{ERP} con una suit o software} de gestión es que un\hlcyan{ ERP es una aplicación que integra un único sistema todos los procesos de negocio} de una empresa. Adicionalmente se pretende que todos los datos estén disponibles todo el tiempo para todo el undo en la empresa de manera centralizada.\hlcyan{ Esto descarta como ERP aquellos programas basados en múltiples aplicaciones (denominados suit) }independientes o modulares que duplican la información o no la centralizan en una única base de datos. \hl{También elimina} aquellos programas que se basan en sistema de \hl{base de datos de ficheros independientes.}
+	\section{Sistemas CRM (Customer Resource Managemento Gestión de las Relaciones con los Clientes)}
+	La \hlcyan{Gestión de las relaciones con los clientes} (customer resource management - CRM-) es un modelo de gestión de toda la organización basada en la \hl{orientación al cliente para poder ofrecerle un excelente servicio de atención}. La información sobre el mercado y sobre los clientes se convierte en el recurso\hlcyan{ más importante de una organización}. A partir de los datos registrados en su base de datos de clientes la empresa debe llevar a cabo un \hlcyan{análisis de la rentabilidad de cada cliente} y de s\hlcyan{u potencial de compras} ya que la posición competitiva de una empresa y su rentabilidad se \hl{encuentran directamente relacionadas con el volumen de datos acumulados} que mantiene de todos los clientes, en relación con el mantenido por sus competidores. \\
+	\\
+	Las principales funcionalidades de un CRM suelen ser: \hl{marketing}, ventas, configuración y personalización, \hl{atención al cliente}, \hlcyan{sistemas de seguridad,} herramientas de colaboración, \hlcyan{generación de informes,} comunicación, etc.\\
+	\\
+	los \hl{modulos de sistemas de información de marketing} ofrecen una \hlcyan{visión} lo más \hlcyan{completa} posible de cada cliente \hlcyan{a partir de la integración de los datos} provenientes de la captura de pedidos de los servicios posventa.\\
+	\\
+	La \hlcyan{fuerza de ventas }es todo aquel Sistema de Información usado en mercadotecnia yen administración que\hlcyan{ automatiza algunas funciones de ventas y de administración.}
+	\section{Sistemas SCM Supply Chain Management o Gestión de la Cadena de Suministro).}
+	Se puede definir la \hl{cadena de suministro} como la \hlcyan{secuencia de eventos} que cubren el \hlcyan{ciclo de vida} entero de un \hlcyan{producto} o servicio desde que es concebido hasta que es consumido. Está \hlcyan{formada} \hlcyan{por} todas aquellas \hlcyan{partes involucradas} de manera directa o indirecta en la satisfacción de la solicitud de un cliente. La cadena de suministro \hl{incluye} no solamente al \hl{fabricante} y al \hl{proveedor}, sino también a los \hl{transportistas}, almacenistas, vendedores e \hl{incluso} a los mismos \hl{clientes}. Tiene como \hl{objetivo} \hlcyan{alinear} las \hlcyan{operaciones} internas hacia el \hlcyan{servicio} al \hlcyan{cliente}, \hlcyan{reducir} los \hlcyan{tiempos} de ciclo y \hlcyan{minimizar} el \hlcyan{capital} necesario para operar.\\
+	
+	Los procesos macro son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+	\item Administración de las \hl{Relaciones con Proveedores} (Supplier Relationship	Management - SRM)
+	\item Administración de la \hl{Cadena de Suministro Interna} (Internal Supply Chain	Management - ISCM)
+	\item Administración de las \hl{Relaciones con Clientes} (Customer Relationship	Management - CRM)
+	\end{itemize}
+
+	Las funciones que componen la Cadena de Suministro Interna en una empresa demanufactura son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item\hl{ Administración del Portafolio de Productos y Servicios} (\hl{PPS}): La oferta que la compañía hace al mercado
+		\item \hl{Servicio a Clientes }(\hl{SAC}): Responsable de conectar necesidad de cliente con operación interna.
+		\item \hl{Control de Producción} (\hl{CP}): Encargada de programar la producción interna.
+		\item \hl{Abastecimiento} (\hl{Aba}):Provee los insumos necesarios para satisfacer las necesidades de producción.
+		\item \hl{Distribución} (\hl{Dis}): Custodia insumos y producto terminado. 
+	\end{itemize}
+	Las decisiones que se han de tomar en una cadena de suministro se dividen en trescategorías o niveles:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Estrategia} o diseño de la cadena de suministro.
+		\item \hlcyan{Planeación} de la cadena de suministro.
+		\item \hl{Operación} de la cadena de suministro
+	\end{itemize}
+	Podemos tener\hlcyan{ dos visiones} de la cadena de suministro. La visión de \hl{empuje} donde los procesos se \hlcyan{dividen en dos categorías }dependiendo si son ejecutados en \hl{respuesta} a un pedido o en \hl{anticipación}. Y por otro lado la visión de \hl{cilco} donde los procesos se dividen en \hlcyan{series de ciclos}, cada uno realizado en la interfase de dos etapas sucesivas. Cada ciclo \hlcyan{ocurre entre dos etapas sucesivas} deuna cadena de suministro. \\
+	\\
+	La \hlcyan{Gestión de la cadena de suministro }es el \hlcyan{proceso de planificación, puesta en ejecución y control de las operaciones} de la cadena de suministro con propósito de \hlcyan{satisfacer} las \hlcyan{necesidades} del cliente con tanta eficacia como sea posible. \\
+	El efecto ``Látigo'' se centra en que las \hl{faltas} en la Cadena de Suministrostienden a ser \hl{causadas} por los \hl{embotellamientos} en el extremo del \hl{consumidor}	de la misma. \\
+	El punto de \hl{partida} del canal de distribución es el \hlcyan{productor}. El punto \hl{final} o de destino es el \hlcyan{consumidor}. El conjunto de personas u organizaciones que están \hl{entre} productory usuario final son los \hlcyan{intermediarios}.\\
+	\\
+	Existen \hl{dos tipos} de canales, los canales \hlcyan{directos} donde el productor vende el producto directamente al \hl{consumidor} y los canales \hlcyan{indirectos} donde existen uno (corto) o varios (largo) \hl{intermediarios}. Las relaciones entre empresas  pueden tener conexiones \hl{horizontales} que son las que se realizan entre empresas que tienen la \hlcyan{misma actividad} o \hl{verticales} que son entre empresas que realizan \hlcyan{distintas funciones}. 
+	\subsection{Trazabilidad}
+	Se define \hl{trazabilidad} como los procedimientos que permiten \hl{conocer el histórico}, la ubicación y la trayectoria \hl{de un producto} o lote de productos a lo largo de la cadena de suministros. \\
+	Se debe \hl{cumplir} en aquellos sectores en que se \hl{trabaje con alimentos, piensos, animales} destinados a la producción de alimentos y de cualquier otra \hl{sustancia destinada} a ser incorporada \hl{en un alimento o pienso} o con probabilidad de serlo. \\
+	Podemos destacar \hl{tres tipos} de trazabilidad. La \hlcyan{ascendente} que es saber cuales son los \hlcyan{productos} que se \hlcyan{reciben} en la empresa. La \hlcyan{interna} que es \hlcyan{dentro} de la propia \hlcyan{empresa}. Y la \hlcyan{descendente} que es saber los \hlcyan{productos} que \hlcyan{expende} la empresa. \\
+	Un sistema de trazabilidad \hl{bien implantado permite} en caso de una crisis
+	alimentaria \hlcyan{acortar} el \hlcyan{tiempo} de \hlcyan{reacción} lo que disminuye los costes y laproducción a retirar.
+	\section{Negocio electrónico (e- Business).}
+	Podemos \hlcyan{definir negocio electrónico} como el \hl{conjunto de actividades y prácticas de gestión empresarial} resultantes de la incorporación a los \hl{negocios de las TICs en general y de Internet} en particular,\hl{ asi como}, a la nueva \hl{configuración descentralizada} de \hlcyan{las organizaciones }y su adaptacióna las características de la nueva economía.\\
+	Todas \hlcyan{las actividades empresariales que ponen en contacto clientes, proveedores y sociosla mercadotecnia y ventas,la producción y logística,
+	gestión y finanzas}tienen lugar en el negocio electrónico dentro de redes informáticas que a su vez\hlcyan{permiten una descentralización} en líneas de negocio.
+\end{document}
