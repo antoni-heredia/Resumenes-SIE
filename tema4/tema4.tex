@@ -1,0 +1,269 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref} %para que el indice sea interactivo
+\hypersetup{colorlinks=true,linkcolor=black} %para que los link salgan en negro y sin una caja roja 
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[gen]{eurosym}
+
+\usepackage{graphics,graphicx, float} %para incluir imï¿½genes y colocarlas
+\usepackage{color,soul} %para poder remarca texto
+\definecolor{lightblue}{rgb}{.90,.95,1} %definicion de colores para el resaltado
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\sethlcolor{amber} %color del resaltado por defecto
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}} %nuevos comandos para hacer resaltados en otros colores
+\DeclareRobustCommand{\hlred}[1]{{\sethlcolor{red}\hl{#1}}}
+\DeclareRobustCommand{\hlpink}[1]{{\sethlcolor{pink}\hl{#1}}}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\usepackage{setspace}
+\linespread{0.9}
+
+\title{
+	\normalfont \normalsize 
+	\textsc{{\bf Sistema de información para empresas (2019-2020)} \\ Grado en Ingeniería Informática \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	{\huge Tema 4} \\ % The assignment title
+	\normalfont
+	\textbf{Comercio electrónico} %subtitulo 
+	\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+	\includegraphics{img/logo.png}
+}
+\author{Antonio Jesús Heredia Castillo} % Nombre y apellidos
+\date{\normalsize\today} % Incluye la fecha actual
+
+\begin{document}
+	\maketitle % Muestra el Tï¿½tulo
+	\newpage
+	\tableofcontents
+	\newpage
+	\section{Tienda virtual}
+	\subsection{Comercio electronico}
+	El \textbf{comercio electrónico} (e-commerce) consiste en la \hl{compra y venta de productos} o servicios a través de \hl{medios electrónicos}, tales como internet. En un \hl{inicio} \hl{solo} se aplicaba a la realización de transacciones \hl{mediante medios electrónicos} aunque al final se ha popularizando como forma de pago por medios electrónicos.\\
+	\\
+	Entre empresas se denomina \hlcyan{ B2B} (business-to-business) que puede estar \hlcyan{abierto a cualquiera} que esté interesado,\hlcyan{ o estar limitado a participantes} específicos pre-calificados.\\
+	Las características únicas son: 
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Ubicuidad} Debe ser independiente de su ubicación temporal y geográfica.
+		\item \hl{Alcance global:}Se habilita el comercio a través de los límites culturales y nacionales sin problemas ni modificaciones.
+		\item \hl{Estándares universales:} Hay un conjunto de estándares de medios técnicos en todo el mundo.
+		\item \hl{Riqueza: }es posible transmitir mensajes de video, audio y texto.
+		\item \hl{Interactividad: }funciona a través de la interacción con el usuario
+		\item \hl{Densidad de la información: }reduce los costos de la información y eleva la calidad.
+		\item  \hl{Adecuación}: permite entregar mensajes personalizados a individuos y grupos.
+		\item \hl{Tecnología social: }generación de contenido por parte del usuario y redes sociales.
+	\end{itemize}
+
+	Todas las aplicaciones se basan en una \hl{infraestructura}. \hlcyan{Esta puede ser de servicios comerciales comunes, de red, de los mensajes y de distribución de información, de interfaces o de plataformas y lenguajes multimedia para la infraestructura pública de red.}\\\\
+	Las empresas \hl{participan} en cuatro categorías básicas, entre \hlcyan{organizaciones y clientes} (B2C), entre \hlcyan{organizaciones y organizaciones} (B2B), dentro de una \hlcyan{misma organización} (B2E) y entre \hlcyan{organizaciones y administración} (B2A o B2G).\\
+	\\
+	Existen compañías que utilizan el comercio electrónico para \hl{muchos aspectos}. Alguno de estos pueden ser la creación de nuevas formas de \hlcyan{marketing}, acceso \hlcyan{interactivo con los catálogos}, \hlcyan{venta} directa o \hlcyan{soporte técnico }ininterrumpido.\\
+	También tiene diferentes \hl{beneficios} como la \hlcyan{reducción de trabajo administrativo}, \hlcyan{transacciones} mas \hlcyan{rápidas}, \hlcyan{acceso} más \hlcyan{fácil} a la \hlcyan{información} y \hlcyan{reducción} de la necesidad de \hlcyan{rescribir} la \hlcyan{información} en los sistemas de información. \\
+	\\
+	El \textbf{libro blanco del comercio electrónico} es una publicación coordinada por la Asociación Española de la Economía Digital. En esta publicación se intenta plasmar un \hlcyan{manual práctico para vender productos o servicio}s en internet. \hlcyan{Reúne datos cuantitativos, asi como ejemplos, referencias y herramientas de utilidad }para cualquier empresa que esté o quiera estar presente en el comercio electrónico.
+	\subsection{Tienda virtual}
+	\hlcyan{Es un espacio para vender producto o servicios a terceros en internet.} Es como el convencional pero como medio para realizar las transacciones la web. Se consideran \hl{legalmente} como \hl{ventas a distancia}, \hl{disponiendo} el comprador de una serie de \hl{derechos} en la \hl{contratación} de estos servicios o productos a distancia.\\
+	Ofrece al cliente \hl{rapidez} en la compra y posibilidad de hacerlo desde cualquier lugar.\\
+	\\
+	Se suele \hl{pagar} mediante \hlcyan{tarjeta de crédito} y se \hl{envían} los productos por \hlcyan{agencia de transporte} (aunque existen variaciones). La mayoría de tiendas \hl{requieren} la \hlcyan{creación de un usuario}. Es muy \hlcyan{importante} hacer compras en línea solo en \hlcyan{sitios reconocidos y con buena reputación}, debido a las amenzas existentes, ademas de usar una \hlred{conexión segura}.\\
+	\\
+	Hay cinco aspecto a considerar para tener éxito con una tienda online:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Diseño web}: hay que tener una web bien construida, respete los estándares y sea cómoda para el cliente.
+		\item \hl{Politica de devolución de productos}:Hay que articular como podrán los usuarios devolver artículos que no estén satisfechos.
+		\item \hl{Generar confianza en el usuario}
+		\item \hl{Canal de distribución}: Cuanto más consigamos automatizar las tareas más peticiones podremos atender.
+		\item \hl{Política de precios}: conseguir atuomatizar lo máximo posible el proceso logístico nos permite ofrecer precios que no están al alcance del comercio tradicional.
+	\end{itemize}
+	\section{Firma digital y e-factura}
+	Se entiende como firma digital una s\hlcyan{ecuencia de datos electrónicos} que se obtiene aplicando a un mensaje determinado un algoritmo de cifrado asimétrico y que \hlcyan{equivale} funcionalmente a la \hlcyan{firma autógrafa} en orden a la identificación del autor. \\
+	Para que dos personas puedan intercambiar entre ellos mensajes electrónicos fiables se debe cumplir los siguiente requisitos. 
+	\\
+	\hl{Identidad}, que se pueda atribuir de forma indubitada a una determinada persona.\\
+	\hl{Integridad}, que el mensaje recibido sea igual que al emitido.\\
+	\hl{No repudiación}, que el emisor no pueda negar que no ha enviado el mensaje. 
+	\hl{Confidencialidad: }implica que el mensaje no haya podido ser leído pr terceros.
+	\subsection{¿En que se basa la firma digital?}
+	La \hlcyan{criptografía} es la \hlcyan{base} de la firma digital. Se suelen combinar \hl{dos técnicas} distintas, que son la \hlcyan{criptografía asimétrica} (de clave publica) y las \hlcyan{funciones hash.} Entendemos criptografía como  las \hl{técnicas} o algoritmos que nos permite \hlcyan{cifrar y descifrar mensajes.}	Podemos entender dos tipos de sistemas criptográficos, simétricos o asimétricos. \\\\
+	En los \hl{simétricos} las dos personas que van intercambiar mensajes utilizan la \hlcyan{misma clave para cifrar y descifrar} el mensaje. Tienen el \hl{inconveniente} de que hay que \hlcyan{intercambiar previamente la clave} por un medio seguro, ademas existe la necesidad de que exista \hlcyan{una clave para cada dos personas}. Esto hace que el cifrado simétrico \hlcyan{no sean aptos para redes abiertas} como internet.\\
+	Los sistemas \hl{asimétricos} se basan en el cifrado mediante la utilización de \hlcyan{un par de claves diferentes} (privada y pública). Una de sus características es que la \hlcyan{clave privada es secreta} y solo lo conoce el que cifra el mensaje, \hlcyan{la clave pública} pude ser conocida por \hlcyan{cualquiera}. Un dato importante es que \hlcyan{a partir} de la \hlcyan{clave publica} \hlcyan{no se puede deducir} la clave \hlcyan{privada}. El sistema asimétrico mas conocido es \hlred{RSA}.\\
+	\\
+	Los mensajes que se intercambian pueden tener un \hlcyan{gran tamaño}, hecho que \hlcyan{dificulta} el
+proceso de \hlcyan{cifrado}. Por ello \hlcyan{no se cifra} el mensaje \hlcyan{entero}, \hlcyan{sino} un \hlcyan{resumen} del mismo obtenido \hlcyan{aplicando} al mensaje una \hl{función hash.} Generalmente tienen un tamaño de \hl{160 bits}.\hlcyan{ Este resumen} de dimensión fija es el que \hlcyan{se cifrará }utilizando la clave privada del emisor del mensaje.\\
+	Finalmente  el proceso es \hl{importante que se pueda saber} y establecer la \hl{fecha exacta} en la que se ha enviado. Para ello se usan \hl{sellos temporales} que es una función que se atribuye generalmente a los\hlcyan{ prestadores de servicios de certificación} mediante la cual se fija la fecha de los mensajes.\\
+	\\
+	Cambien es necesario en ocasiones \hl{garantizar la confidencialidad}, para ello se usa también el cifrado asimétrico, pero en este caso se \hl{cifra} con la clave \hl{publica} y se \hlcyan{descifra} usando la clave \hlcyan{privada}.\\
+	\\
+	Estas claves \hl{no pueden ser creadas por cualquier individuo.} Pero si cualquier persona puede acudir a un \hlcyan{``Prestador de servicios  de Certificación'' para obtener el certificado digital.}
+	\subsection{¿Qué son los certificados digitales?}
+	Un certificado digital \hl{es un archivo electrónico} que tiene un tamaño máximo de 2
+Kbytes y que\hlcyan{ contiene los datos de identificación personal} de A (emisor de los mensajes), \hlcyan{la clave pública de A y la firma privada del propio Prestador de Servicios de Certificación.} Ese archivo electrónico \hlcyan{es cifrado} por la entidad \hlcyan{Prestadora de Servicios de Certificación} con la clave privada de ésta.\\
+	\\
+	Estos certificados digitales tienen una \hlcyan{duración determinada}, pero pueden ser renovados. Gracias al certificado digital, el \hl{par de claves} obtenido por una persona estará \hlcyan{siempre vinculado a una determinada identidad personal.}\\
+	\\
+	Para obtener una firma digital lo \hl{primero} que hay que hacer es \hlcyan{dirigirse} a una empresa que tenga carácter de \hlcyan{prestador de servicios de certificación} y \hlcyan{solicitar}  a ellos el \hlcyan{par de claves y el certificado digital.} Ellos\hlcyan{ comprobaran nuestra identidad} y el prestador de servicios crea el par de claves y \hlcyan{genera el certificado digital}. \hlcyan{Nos entregaran una tarjeta }donde esta grabado tanto el par de claves como el certificado digital. Con esa tarjeta y un \hl{lector}, \hlcyan{podré utilizar la información grabada en ella.} 
+	 \subsection{Factura electrónica}
+	La facturación electrónica es un \hl{equivalente} funcional de la \hl{factura en papel }y consiste
+en la \hlcyan{transmisión de las facturas} o documentos análogos \hlcyan{entre emisor y receptor por medios electrónicos} (ficheros informáticos) \hlcyan{y telemáticos} (de un ordenador a otro), \hlcyan{firmados digitalmente con certificados reconocidos.}\\
+	\\
+	Los \hlcyan{campos obligatorio}s de una factura según  el artículo 6 del RD 1496/2003 son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Núm. Factura
+		\item Fecha expedición
+		\item Razón Social emisor y receptor
+		\item NIF emisor y receptor
+		\item Domicilio emisor y receptor
+		\item Descripción de las operaciones (base imponible)
+		\item Tipo impositivo
+		\item Cuota tributaria
+		\item Fecha prestación del servicio (si distinta a expedición)
+	\end{itemize}
+	\section{Seguridad técnica de e-pagos}
+	Un \hl{sistema de pago electrónico} (EPS) es un sistema de pago que \hl{facilita} la aceptación de \hl{pagos electrónicos} para las transacciones en línea a través de internet.
+ Los EPS realizan la \hl{transferencia del dinero entre compradores y vendedores} en una
+acción de compra-venta electrónica \hl{a través de una entidad financiera} autorizada por
+ambos. Como \hl{ejemplos} de sistemas de pago electrónico nos encontramos las \hl{pasarelas de pago o TPV} (terminal de punto de venta) virtual para el pago con tarjeta, los sistemas
+de\hl{ monedero electrónico} y los sistemas que se conectan directamente con la \hl{banca electrónica} del usuario.\\
+	\\
+	En el \hl{pago con tarjeta}, la pasarela de pago \hlcyan{valida la tarjeta y organiza la transferencia} de dinero.\\
+	En el\hl{ monedero electrónico}, se \hlcyan{almacena el dinero del comprador en formato electrónico y se transfiere} al sistema durante el pago.\\
+	El pago a través de \hl{banca electrónica} \hlcyan{enlaza} un número de \hlcyan{operación} o venta del comercio \hlcyan{a la cuenta del cliente}. Esto reduce el riesgo de fraude.\\
+	\\
+	Entre los \hl{inconvenientes} es que a la \hlcyan{gente le incomoda comprar a través de Internet} ya que no están seguros de que se garantice la seguridad.Ademas de que la gente quiere \hlcyan{garantizar su anonimato.}\\
+	\\
+	Podemos encontrar diversos sistemas de pago electrónicos:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Cajeros electrónicos}: se trata ee sistemas en los que los clientes abren cuentas en unas entidades de Internet.
+		\item  \hl{Dinero electrónico:} Es difícil de definir en un medio tan extenso. Pero a todos los efectos se define como aquel dinero creado, cambiado y gastado de forma electrónica.
+		\item \hl{Cheques electrónicos: } Un sistema de cheques puede ser considerado como un compromiso entre un sistema de tarjetas de crédito y uno de micro-pagos o dinero electrónico (anónimo).
+		\item \hl{Tarjetas de Crédito}
+	\end{itemize}
+	Una \hl{pasarela de pago} es un proveedor de servicios de aplicación de comercio electrónico que \hlcyan{autoriza pagos a negocios electrónicos}. \hl{Equivalente a un TPV pero online.} Estas pasarelas\hl{ cifran información} sensible y \hl{facilitan la transferencia} de información. Ademas realiza una serie de \hlcyan{tareas} para\hlcyan{ procesar una transacción}, \hlcyan{de manera transparente para el comprador.} El \hl{funcionamiento} es el siguiente. Cuando el cliente realiza el pedido \hl{ingresa} los detalles de su \hl{tarjeta de crédito}, si es a través de un sitio web \hlcyan{se cifra mediante SSL}. El vendedor entonces \hl{reenvía} los detalles de la transacción \hlcyan{a su pasarela de pago.}Esta recibe la información y la reenviá al banco, el banco a su vez \hlcyan{reenvía la información al banco emisor} de la tarjeta de crédito y este recibe el pedido de autorización  y ya \hlcyan{aprueba o rechaza la transacción.}\\
+	\\
+	Un \hl{TPV} (terminal punto de venta) hace referencia al dispositivo y tecnologías que \hlcyan{ayudan en la tarea de gestión de un establecimiento de venta al público} para que pueda contar con sistemas informáticos especializados mediante una interfaz accesible para los vendedores.\\
+	El nombre \hl{datáfono}, erroneamente llamado TPV, se\hlcyan{ da al equipo que se instala en los establecimientos comerciales}.\\
+	\\
+	La \hl{tarjeta monedero}, o monedero electrónico, es el \hlcyan{sistema de micropagos multipropósito más eficiente.} Sirve para aquellas transacciones de bajo monto y alto volumen. La tarjeta monedero contiene un \hl{chip} electrónico \hl{que se recarga con dinero }y \hl{permitepagar} productos y servicios deslizando la tarjeta en el lector cuyo \hlcyan{importe exacto se	descargará o acreditará del chip.}
+	\subsection{Transacciones electrónicas seguras}
+	Transacciones Electrónicas Seguras (SET) es un \hl{protocolo estandarizado}, diseñado para \hl{salvaguardar las compras} pagadas con tarjeta \hl{a través de redes abiertas}\\
+	\textbf{SET} nos ofrece:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hl{Autenticación}: todas las partes pueden autenticarse mutuamente mediante certificados digitales. 
+		\item  \hl{Confidencialidad}: la información de pago se cifra para que no pueda ser espiada.
+		\item \hl{Integridad}: garantiza que la información intercambiada, como número de tarjeta,
+no podrá ser alterada.
+		\item  \hl{Gestión del pago}: SET gestiona tareas asociadas a la actividad comercial de
+gran importancia.
+	\end{itemize}
+	En \textbf{SET} hay \hl{implicadas varias entidades}, tales como el\hlcyan{ banco emisor} que emite la tarjeta del cliente, el \hlcyan{banco adquiriente} que establece una relación con el comerciante, \hlcyan{el titular de la tarjeta y el comerciante.} Ademas también no encontramos a la \hlcyan{pasarela de pagos }que es el mecanismo por el cual se procesan y autorizan las transacciones,\hlcyan{ el procesador }que nos proporciona servicios adicionales y la \hlcyan{autoridad de certificación.}\\
+	\\
+	Podemos explicar el funcionamiento de \textbf{SET} en diez pasos:
+	\begin{enumerate}
+	\item \hl{Decisión de compra del cliente}. El cliente está navegando por el sitio web del comerciante y decide comprar un artículo
+	\item  \hl{Arranque del monedero}. El servidor del comerciante despierta a la aplicación monedero del cliente.
+	\item  \hl{El cliente comprueba el pedido} y transmite una orden de pago de vuelta al
+comerciante.
+	\item \hl{El comerciante envía la petición de pago a su banco} todo ello convenientemente\hl{ cifrado y firmado}.
+	\item  \hl{El banco adquiriente valida al cliente y al comerciante} y obtiene una autorización del banco emisor del cliente
+	\item \hl{	El emisor autoriza el pago.}
+	\item \hl{El adquiriente envía al comerciante un testigo de transferencia de fondos. }
+	\item \hl{El comerciante envía un recibo al monedero del cliente}
+	\item \hl{El comerciante usa el testigo de transferencia de fondos para cobrar el importe de la transacción. }
+	\item \hl{El dinero se descuenta de la cuenta del cliente}
+	\end{enumerate}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/screenshot001}
+		\caption{Los diez pasos de SET}
+		\label{fig:screenshot001}
+	\end{figure}
+	\section{Internacionalización (soporte de múltiples lenguajes)}
+	\hlcyan{Hay varios puntos} que debe plantearse toda empresa (de internet o no) antes de lanzarse a conquistar el mundo:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item\hl{ Analizar el potencial}: exportador de tu empresa: Identificar los puntos fuertes y débiles de nuestro producto en los nuevos mercados. 
+		\item \hl{Conocer el mercado}: Hemos de analizar los gustos y necesidades de cada país, sus canales de comercialización, datos históricos y las tendencias de futuro. 
+		\item \hl{Analizar a la competencia:} Saber con quién tendrá que competir nuestro producto
+		\item\hl{ Adaptar el producto o servicio a la demanda de cada mercado}: Debemos centrar los esfuerzos en aquellos productos o servicios que creamos que pueden tener mayor
+	acogida e ir ampliando poco a poco.
+		\item\hl{ Definir una estrategia de entrada en el país}: Buscar un socio local y crear una joint venture, buscar uno o varios distribuidores de tu sector, aliarse con prescriptores
+		\item \hl{Planificar tus recursos humanos:} A medio plazo siempre es necesario buscar socios o desarrollar talento en el país de destino.
+	\end{itemize}
+
+	\hlcyan{Ademas tenemos que tener algunos detalles como tener una traducción impecable, comprar dominios locales, crear contenidos específicos para cada pais, adaptarnos a la moneda y forma de pago, crear un plan de marketing online, medir y adaptarse a los resultados y hacer test.}
+	\section{Herramientas para la creación de tiendas virtuales}
+	Para programas de comercio electrónico \textbf{B2C} tenemos \hl{dos grandes opciones}. O se instala una \hlcyan{aplicación desarrollada por terceros en servidor propio} o se contrata una aplicación a modo de tienda llave en mano en alquiler, outsourcing, \hlcyan{transfiriendo a empresas especializadas toda la gestión técnica de la tienda online.} Actualmente\hlcyan{ hay aplicaciones de comercio electrónico B2C muy buenas tanto gratis como de pago} que han permitido la creación de tiendas virtuales
+que están en producción \hlcyan{desde hace muchos años.}	Aunque hay mucho software gratuito para tiendas online, vamos a ver los mas conocidos.\\
+	\\
+	\hl{Magento}  uno de los sistemas más utilizados. Tiene \hlcyan{capacidades limitadas},  pero aun asi esta \hlcyan{muy por encima de sus competidores}. Es un software que requiere \hl{conocimientos avanzados de informática} y tiene un \hlcyan{sistema de administración muy complejo.} A favor tiene que es \hl{muy potente}, es \hlcyan{atractivo visualmente},  \hl{implementación} de módulos \hl{sencilla}, funciones de SEO y URL amigables, entre otros.  En contra es que tiene \hl{costes altos}, \hlcyan{personalización complicada}, \hlcyan{panel de control complicado} y \hlred{consume muchos recursos.}\\
+	\\
+	\hl{Opencart} es de código abierto y basado en \hlcyan{?HP}. Solución muy buena  si quieres tener un \hlcyan{coste mínimo.} \hlcyan{A favor tenemos que tiene un diseño muy atractivo, implementar modulos es sencillo, puedes organizar productos por categoriccas, la curva de aprendizaje es muy baja, entre otros}.\hl{En contra que la comunidad es pequeña y los temas son escasos}.\\
+	\\
+	\hl{OScommerce} posiblemente ha sido el mejor gestor para tiendas online, pero\hlcyan{ ya se ha quedado atrasado.} \hl{A favor} tenemos que es multilenguaje, tiene una\hlcyan{ gran comunidad,} \hlcyan{muchos módulos,} gestión avanzada de envíos e \hlcyan{instalación sencilla}. \hl{En contra} es que es un\hlcyan{ proyecto estancado} y cualquier modificación necesita\hlcyan{ grandes conocimientos de PHP,}\hlcyan{ muchos bugs e inseguridad.}\\
+	\\
+	\hl{Prestashop} es de los\hlcyan{ mas nuevos y el favorito de mucho}s. Tiene una \hlcyan{buena indexación y AJAX completamente integrado} le da un aspecto muy actual.A favor tiene que es fácil y \hlcyan{rapido de usar, coste económico multitud de módulos, optimización SEO, bajo consumo, permite códigos de barras, panel de control muy intuitivo}, entre otros.\hlcyan{ En contra que el soporte es francés o ingles y como siempre esta en evolución no hay una versión estable.}\\
+	\\
+	
+	En \hlred{conclusión} la hora de elegir un CMS o otro, debéis tener en cuenta lo amplio que va a ser el proyecto:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item Magento te aportará diseño y escalabilidad
+		\item Opencart funcionalidad y sensatez
+		\item Oscommerce te dará robustez y experiencia
+		\item Prestashop facilidad y colaboración
+	\end{itemize}
+	\section{Marco legal del comercio electrónico}
+	Existen diferentes directivas relacionadas con el comercio electrónico. Las que marca el Parlamento Europeo son:
+	\begin{itemize}[label={$\blacktriangleright$}]
+		\item \hlcyan{Directiva 2002/65/CE del Parlamento Europeo y del Consejo, de 23 deseptiembre} relativa a la comercialización a distancia de servicios financierosdestinados a los consumidores
+		\item\hl{ Directiva 2002/58/CE del Parlamento Europeo y del Consejo, de 12 de julio} relativa al tratamiento de los datos personales y a la protección de la intimidaden el sector de las comunicaciones electrónicas (Directiva sobre la privacidad y las comunicaciones electrónicas).
+		\item \hl{Directiva 2000/31/CE del Parlamento Europeo y del Consejo, de 8 de junio} relativa a determinados aspectos jurídicos de los servicios de la sociedad de la información, en particular el comercio electrónico en el mercado interior (Directiva sobre el comercio electrónico).
+		\item \hl{Directiva 98/84/CE del Parlamento Europeo y del Consejo de 20 de noviembre},relativa a la protección jurídica de los servicios de acceso condicional o basados en dicho acceso
+	\end{itemize}
+	\subsection{Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y decomercio electrónico}
+	Esta ley regula el régimen jurídico de los servicios de la sociedad de la información y de la contratación por vía electrónica.
+	Estos servicios serán\\\\
+	\hl{Todo servicio prestado} normalmente a título oneroso, a distancia,\hl{ por vía electrónica y a petición individual} del destinatario. El concepto de servicio de la sociedad de la información comprende \hl{también los servicios no remunerados por sus destinatarios}, en la medida en que \hl{constituyan} \hl{una actividad económica} para el prestador de servicios. 
+	
+	\hl{No tendrán la consideración de servicios de la sociedad de la información} los servicios prestados \hlcyan{por medio de telefonía vocal, fax o télex}. \hl{Tampoco}\hlcyan{ el intercambio de información por medio de correo electrónico} u otro medio de comunicación electrónica equivalente \hlcyan{para fines ajenos a la actividad económica de quienes lo utilizan.} \hlcyan{Ni} los servicios de \hlcyan{radiodifusión televisiva o el teletexto televisivo} y otros servicios equivalentes.\\
+	\\
+	Las sanciones por el incumplimiento de la ley pueden ser: leves hasta \hl{30.000\euro.} Las graves desde \hl{30.001\euro hasta 150.000} \euro y las muy graves \hlcyan{desde 150.0001\euro}.\\
+	\\
+	Los prestadores de servicios deben indicar en su pagina web el nombre o denominación social y datos de contacto, el numero de inscripción que le corresponda en el registro mercantil, su NIF y el precio de los productos, indicando si incluye o no losimpuestos aplicables, gastos de envío y cualquier otro dato que deba incluirse en cumplimiento de normas autonómicas aplicables.\\
+
+	Si se necesita una \hlcyan{autorización administrativa, los datos de la misma}, los identificativos d\hlcyan{el órgano encargado de su supervisión}.Si es una \hlcyan{profesión regulada los datos del colegio profesional y los datos del colegiado.}\hlcyan{ Los códigos de conducta} a los que este adherido.\\
+	\\
+	Los prestadores de servicios \hl{informarán} a los destinatarios \hl{de manera clara y completa }la \hl{utilización} y finalidad de \hl{sus datos} que han sido recogidos. \hl{Ademas podrán rechazar el tratamiento} de sus  datos de forma sencilla y gratuita.	Cuando exista \hl{tarificación adicional} se deber\hlcyan{á realizar el consentimiento previo, informando y expreso del usuario}.\\
+	\\
+	\hl{No tienen la obligación de supervisar los contenidos} que alojan, transmiten o clasifican en un directorio de enlaces, \hlcyan{pero deben colaborar con las autoridades} públicas cuando se les requiera para \hlcyan{interrumpir} la prestación de un servicio o \hlcyan{retirar un contenido.} en cambio si\hlcyan{ pueden incurrir en responsabilidad si toman una participación activa en su elaboración} o si conociendo la ilegalidad de un material, no actúan con rapidez para retirarlo. \\
+	\\
+	Los \hl{proveedores} de acceso a Internet están \hlcyan{obligados a informar} a sus usuarios sobre los medios técnicos que permiten \hlcyan{la protección frente a  las amenazas de seguridad }en Internet \hlcyan{y sobre las herramientas para el filtrado de contenidos} no deseados. \hlcyan{También deben informar} sobre las posibles \hlcyan{responsabilidades} en que puedan incurrir \hlcyan{por el uso de Internet	con fines ilícitos}.
+	\subsection{Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de CarácterPersonal}
+	Tiene por objeto \hl{garantizar y proteger}, en lo que concierne al \hlcyan{tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas}, y especialmente de su honor,	intimidad y privacidad personal y familiar.\\
+	\\
+	Las sanciones tienen una \hlcyan{elevada cuantía}. Dichas sanciones van desde \hl{900\euro a 40.000\euro} las leves, las graves \hl{40.0001\euro a 300.000\euro} y las muy graves van desde \hl{300.001\euro a 600.000\euro}. \\
+	\\
+	Los datos personales se \hl{clasifican según su sensibilidad}, siendo obligatorio en todo caso la\hlcyan{ declaración de los ficheros de datos protegidos} a la Agencia Española de Protección de Datos.\\
+	\\
+\hl{Hay que informar siempre de:}
+	\begin{enumerate}
+		\item De la existencia de un fichero o tratamiento de datos de carácter personal, dela finalidad de la recogida de éstos y de los destinatarios de la información.
+		\item Del carácter obligatorio o facultativo de su respuesta a las preguntas que lessean planteadas.
+		\item De las consecuencias de la obtención de los datos o de la negativa a suministrarlos.
+		\item De la posibilidad de ejercitar los derechos de acceso, rectificación, cancelacióny oposición.
+		\item De la identidad y dirección del responsable del tratamiento o, en su caso, desu representante
+	\end{enumerate}
+	\hlred{Excepción}: \hl{No será necesaria la comunicación en tres meses de dicha información silos datos han sido recogidos de ``fuentes accesibles al público''}
+	\\
+	\\
+	Existe consentimiento \hl{inequívoco}, \hl{tácito}, \hl{expreso} (si hacen referencia a origen racial, salud y vida sexual) y el\hl{ expreso y por escrito} (relativos a ideología, afiliación sindical, religión y creencias ).\\
+	\\
+	\hlcyan{Sólo} podrán ser \hlcyan{comunicados} a un \hlcyan{tercero} \hlcyan{con} el previo \hlcyan{consentimiento del interesado.}\\
+	\\
+	\hl{No será preciso} si esta autorizado \hlcyan{por una ley}, son recogidos de \hlcyan{fuentes publicas}, por desarrollo, cumplimiento y \hlcyan{control jurídico} o cuando sea  destinatario \hlcyan{el defensor del pueblo, ministerio fiscal o jueces.} Ademas de cuando sea cesiones entre administraciones publicas o sean datos \hlcyan{relativos a la salud y sea necesarios por urgencia.}\\
+	\\
+	Sera \hlred{nulo} el consentimiento cuando la información que se facilite al interesado \hlcyan{no le permita conocer la finalidad a que destinarán los datos} se autoriza o el tipo de actividad de aquel a quien se pretenden comunicar.	El consentimiento \hlcyan{tiene	un carácter de revocable}
+	
+\end{document}
